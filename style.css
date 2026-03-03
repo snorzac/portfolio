@@ -4,3 +4,8 @@ body
 {
     font-family: 'JetBrains Mono', monospace;
 }
+
+.avatar
+{
+    border-radius: 50%;
+}
