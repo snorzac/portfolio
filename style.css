@@ -16,3 +16,9 @@ body
     width: 250px;
     height: 250px;
 }
+
+.btn
+{
+    background-color: #FFD1DC;
+    font-size: large;
+}
