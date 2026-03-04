@@ -5,18 +5,98 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 
     <body>
-        <div class="container">
-            <div class="text-center">
-                <img src="eunchae.jpg" alt="Avatar" class="avatar">
-                <h1>Isaac Tan</h1>
-                <p style="margin-top: 20px;">cybersecurity and digital forensics graduate</p>
-                <button type="button" class="btn">about me</button>
-                <button type="button" class="btn">projects</button>
-                <button type="button" class="btn">let's connect!</button>
+        <section id="sec1" class="sec1">
+            <div class="container">
+                <div class="text-center">
+                    <img src="avatar.jpeg" alt="Avatar" class="avatar">
+                    <h1><span class="auto-type"></h1>
+                    <p style="margin-top: 20px;"><span class="auto-type2"></p>
+                    <a href="#sec2">
+                        <button type="button" class="btn">about me</button>
+                    </a>
+                    <a href="#sec3">
+                        <button type="button" class="btn">my projects</button>
+                    </a>
+                    <a href="#sec4">
+                        <button type="button" class="btn">let's connect!</button>
+                    </a>
+                    <div style="font-size: 40px; padding-top: 30px;">
+                        <a href="https://www.instagram.com/isaactannnnn/" target="_blank"><i class="fa-brands fa-instagram" style="color: rgb(255, 197, 211);"></i></a>
+                        <a href="https://www.facebook.com/isaac.tan.73157" target="_blank"><i class="fa-brands fa-facebook" style="color: rgb(255, 197, 211);"></i></a>
+                        <a href="https://github.com/snorzac" target="_blank"><i class="fa-brands fa-github" style="color: rgb(255, 197, 211);"></i></a>
+                        <a href="https://www.linkedin.com/in/isaac-tan-98622b218/" target="_blank"><i class="fa-brands fa-linkedin" style="color: rgb(255, 197, 211);"></i></a>
+                    </div>
+                    <a href="#sec2">
+                        <div class="scroll-down">
+                            <i class="fa-solid fa-arrow-down fa-bounce" style="color: rgb(255, 197, 211);"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section id="sec2" class="sec2">
+            <div class="container">
+                <h1 class="text-center">about me</h1>
+                <div class="row">
+                    <div class="col-6"></div>
+                    
+                    <div class="col-6" style="padding-top: 20px;">
+                        <h4>hello! i'm isaac</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p class="resume"><a href="./Resume.pdf" target="_blank">check out my resume!</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec3" class="sec3">
+            <div class="container">
+                <h1 class="text-center">my projects</h1>
+            </div>
+        </section>
+
+        <section id="sec4" class="sec4">
+            <div class="container">
+                <h1 class="text-center">get in touch</h1>
+                <div class="row" style="padding-top: 40px;">
+                    <div class="col-6">
+                        <h4>contact information</h4>
+                    </div>
+                    <div class="col-6">
+                        <form>
+                            <div class="form-group">
+                                <label for="name" style="padding-bottom: 10px;">
+                                    <h4>name</h4>
+                                </label>
+                                <input type="name" class="form-control" id="name" placeholder="your name">
+                            </div>
+                            <div class="form-group" style="padding-top: 30px;">
+                                <label for="email" style="padding-bottom: 10px;">
+                                    <h4>email</h4>
+                                </label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="enter email">
+                            </div>
+                            <div class="form-group" style="padding-top: 30px;">
+                                <label for="message">
+                                    <h4>message</h4>
+                                </label>
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" rows="5" placeholder="send me a message"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
