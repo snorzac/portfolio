@@ -14,7 +14,8 @@ document.querySelectorAll('.nav-link').forEach(link =>
         const navbarCollapse = document.querySelector('.navbar-collapse');
         if (navbarCollapse.classList.contains('show'))
         {
-            navbarCollapse.classList.remove('show');
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
         }
     });
 });

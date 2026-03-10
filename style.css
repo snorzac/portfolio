@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 /* change highlight colour */
+/* change highlight colour */
+/* change highlight colour */
 ::selection
 {
     background: rgb(255, 197, 211);
     color: #000;
 }
 
+/* navbar */
+/* navbar */
+/* navbar */
 .navbar
 {
     position: fixed;
@@ -35,6 +40,9 @@ body
     justify-content: center;
 }
 
+/* resume */
+/* resume */
+/* resume */
 .resume
 {
     color: rgb(240, 120, 150);
@@ -46,6 +54,10 @@ body
     color: blue;
 }
 
+
+/* avatar */
+/* avatar */
+/* avatar */
 .avatar
 {
     border-radius: 50%;
@@ -55,6 +67,9 @@ body
     margin-bottom: 20px;
 }
 
+/* scroll down */
+/* scroll down */
+/* scroll down */
 .scroll-down
 {
     scroll-margin-top: 70px;
@@ -89,18 +104,20 @@ a:focus
 }
 
 /* education */
+/* education */
+/* education */
 .timeline
 {
     position: relative;
     margin-top: 24px;
-    padding-left: 28px;
+    padding-left: 38px;
 }
 
 .timeline::before
 {
     content: '';
     position: absolute;
-    left: 4px;
+    left: 14px;
     top: 6px;
     bottom: 0;
     width: 1px;
@@ -151,6 +168,8 @@ a:focus
 }
 
 /* project grid */
+/* project grid */
+/* project grid */
 .projects-grid
 {
     display: grid;
@@ -177,6 +196,8 @@ a:focus
 }
 
 /* project cards */
+/* project cards */
+/* project cards */
 .project-card
 {
     display: block;
@@ -195,6 +216,8 @@ a:focus
 }
 
 /* thumbnail */
+/* thumbnail */
+/* thumbnail */
 .project-thumb
 {
     position: relative;
@@ -212,6 +235,9 @@ a:focus
     display: block;
 }
 
+/* project description */
+/* project description */
+/* project description */
 .project-info
 {
     padding-top: 10px;
@@ -233,6 +259,9 @@ a:focus
     margin-bottom: 4px;
 }
 
+/* project tags */
+/* project tags */
+/* project tags */
 .project-tags
 {
     display: flex;
