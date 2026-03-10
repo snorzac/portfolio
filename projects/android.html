@@ -17,29 +17,69 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <h1>music app project</h1>
+                    <h1>music app</h1>
                 </div>
             </div>
+
+            <!-- android studio -->
+            <div class="lightbox" id="lightbox">
+                <span class="lightbox-close" onclick="closeLightbox()">x</span>
+                <img id="lightbox-img" src="" alt="">
+            </div>
+            
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <img src="../public/project-images/android.png" class="img-fluid">
+                    <img src="../public/project-images/android.png" class="img-fluid project-img" onclick="openLightbox(this)">
                 </div>
                 <div class="col-12 col-md-6">
-                    <p>developed an android music application using <b>java</b> in <b>android studio</b>, focusing on both functionality and user experience. the app allows users to play, pause, browse, and manage music tracks through a clean and intuitive interface.</p>
-                    <p>the design process followed <b>ui/ux design principles</b>, including visual heirarchy, consistency, accessibility, and ease of navigation. <b>low-fidelity and high-fidelity prototypes</b> were first created in adobe xd to plan layout, user flows, and interactions before implementation.</p>
+                    <h4>android studio</h4>
+                    <p>an individual project built in java using android studio, developed alongside my ui/ux module to practice the full product design cycle from prototype to implementation.</p>
+                    <h5>features</h5>
+                    <ul>
+                        <li>playback controls: play, pause, next, previous, repeat, and shuffle</li>
+                        <li>register and delete user accounts</li>
+                        <li>firebase authentication for secure user login</li>
+                    </ul>
+                    <!-- use this part for lofi -->
                 </div>
             </div>
-            <div class="row">
+
+            
+            <!-- card slideshow -->
+            <div class="row" style="padding-top: 20px;">
                 <div class="col-12 col-md-6">
-                    <p>this is lo-fi</p>
+                    <h4>ui/ux</h4>
+                    <h5>design process</h5>
+                    <p>before writing any code, i designed the app's interface in Adobe XD, creating both lo-fi wireframes to map out the user flow and hi-fi prototypes to finalise the visual design.</p>
+                    <p>to validate the design, i conducted usability testing and collected user feedback using the system usability scale (SUS) survey, using the results to refine the ui before development.</p>
                 </div>
                 <div class="col-12 col-md-6">
-                    <img src="../public/project-images/low-fi.png" class="img-fluid">
+                    <!-- ui/ux -->
+                    <div class="lightbox" id="lightbox">
+                        <span class="lightbox-close" onclick="closeLightbox()">x</span>
+                        <button class="lightbox-prev" onclick="lightboxNav(-1)">&#8592;</button>
+                        <img id="lightbox-img" src="" alt="">
+                        <button class="lightbox-next" onclick="lightboxNav(1)">&#8594;</button>
+                    </div>
+                    <div class="card-slideshow">
+                        <button class="slide-btn prev-btn" onclick="changeSlide(-1)">&#8592;</button>
+                        <div class="slide-track">
+                            <img src="../public/project-images/low-fi.png" class="slide-img active" onclick="openLightbox(0)">
+                            <img src="../public/project-images/hi-fi1.png" class="slide-img active" onclick="openLightbox(1)">
+                            <img src="../public/project-images/hi-fi2.png" class="slide-img" onclick="openLightbox(2)">
+                        </div>
+                        <button class="slide-btn next-btn" onclick="changeSlide(1)">&#8594;</button>
+                    </div>
                 </div>
+                <!-- <div class="col-12 col-md-6">
+                    <img src="../public/project-images/low-fi.png" class="img-fluid project-img" onclick="openLightbox(this)">
+                </div> -->
             </div>
+
+            <!-- adobexd link -->
             <div class="row adobexd">
                 <div class="col-12 col-md-6">
-                    <a href="https://xd.adobe.com/view/1a208697-eed7-4b7b-b6b7-0f093c7023ff-4f73/?fullscreen&hints=off" target="_blank">view my hi-fi project here</a>
+                    <a href="https://xd.adobe.com/view/1a208697-eed7-4b7b-b6b7-0f093c7023ff-4f73/?fullscreen&hints=off" target="_blank">view my hi-fi project here!</a>
                 </div>
             </div>
         </div>

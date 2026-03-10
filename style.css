@@ -295,9 +295,70 @@ a:focus
 }
 
 /* android */
+.project-img
+{
+    border: 3px solid rgb(255, 197, 211);
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.lightbox
+{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.lightbox.active
+{
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox img
+{
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+    object-fit: contain;
+    transform: translateY(40px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.lightbox.active img
+{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.lightbox-close
+{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.projects h1
+{
+    padding-bottom: 10px;
+}
+
 .projects p
 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .adobexd
@@ -309,4 +370,113 @@ a:focus
 .adobexd a:hover
 {
     text-decoration: underline;
+}
+
+.fade-in-up
+{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp
+{
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-slideshow
+{
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    border: 3px solid rgb(255, 197, 211);
+    border-radius: 10px;
+}
+
+.slide-track
+{
+    overflow: hidden;
+    /* position: relative; */
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+}
+
+.slide-img
+{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.slide-img:hover
+{
+    transform: scale(1.05);
+}
+
+.slide-img.active
+{
+    opacity: 1;
+}
+
+.slide-btn
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 197, 211, 0.6);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-btn
+{
+    left: 8px;
+}
+
+.next-btn
+{
+    right: 8px;
+}
+
+.lightbox-prev, .lightbox-next
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 197, 211, 0.3);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.lightbox-prev
+{
+    left: 20px;
+}
+
+.lightbox-next
+{
+    right: 20px;
 }
