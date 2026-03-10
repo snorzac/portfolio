@@ -281,3 +281,32 @@ a:focus
     opacity: 1;
     background-color: rgb(255, 197, 211);
 }
+
+.back
+{
+    color: rgb(240, 120, 150);
+    padding-top: clamp(56px, 8vh, 80px);
+    padding-bottom: 10px;
+}
+
+.back a:hover
+{
+    font-weight: bold;
+}
+
+/* android */
+.projects p
+{
+    font-size: 1.2rem;
+}
+
+.adobexd
+{
+    padding-top: 20px;
+    color: rgb(240, 120, 150);
+}
+
+.adobexd a:hover
+{
+    text-decoration: underline;
+}
