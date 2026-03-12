@@ -24,9 +24,19 @@
 footer
 {
     text-align: center;
+    font-size: 1rem;
+    margin-top: 10%;
     padding: 3px;
     background-color: rgb(255, 197, 211);
     color: black;
+}
+
+.socials
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    font-size: 40px;
 }
 
 .row
