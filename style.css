@@ -21,6 +21,14 @@
     background-color: rgb(255, 218, 226);
 }
 
+footer
+{
+    text-align: center;
+    padding: 3px;
+    background-color: rgb(255, 197, 211);
+    color: black;
+}
+
 .row
 {
     scroll-margin-top: 70px;
@@ -285,7 +293,7 @@ a:focus
 .back
 {
     color: rgb(240, 120, 150);
-    padding-top: clamp(56px, 8vh, 80px);
+    padding-top: 40px;
     padding-bottom: 10px;
 }
 
@@ -294,6 +302,16 @@ a:focus
     font-weight: bold;
 }
 
+@media (max-width: 576px)
+{
+    .back
+    {
+        padding-top: 35px;
+    }
+}
+
+/* android */
+/* android */
 /* android */
 .project-img
 {
@@ -356,18 +374,18 @@ a:focus
     padding-bottom: 10px;
 }
 
-.projects p
+.projects p ul
 {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
-.adobexd
+.ext-link
 {
     padding-top: 20px;
     color: rgb(240, 120, 150);
 }
 
-.adobexd a:hover
+.ext-link a:hover
 {
     text-decoration: underline;
 }
@@ -392,7 +410,7 @@ a:focus
 {
     position: relative;
     width: 100%;
-    overflow: visible;
+    overflow: hidden;
     border: 3px solid rgb(255, 197, 211);
     border-radius: 10px;
 }

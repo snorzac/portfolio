@@ -23,32 +23,18 @@ document.querySelectorAll('.nav-link').forEach(link =>
     });
 });
 
-// expand image in project
-document.addEventListener('DOMContentLoaded', function()
-{
-    const lightbox = document.getElementById('lightbox');
-    if (lightbox)
-    {
-        lightbox.addEventListener('click', function()
-        {
-            closeLightbox();
-        });
-    }
-});
+let isSingleImage = false;
 
-function openLightbox(img)
+// for single images outside the slideshow
+function openSingleImage(src)
 {
+    isSingleImage = true;
     const lightbox = document.getElementById('lightbox');
-    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').src = src;
+    document.querySelector('.lightbox-prev').style.display = 'none';
+    document.querySelector('.lightbox-next').style.display = 'none';
     lightbox.style.display = 'flex';
     setTimeout(() => lightbox.classList.add('active'), 10);
-}
-
-function closeLightbox()
-{
-    const lightbox = document.getElementById('lightbox');
-    lightbox.classList.remove('active');
-    setTimeout(() => lightbox.style.display = 'none', 300);
 }
 
 // images array
@@ -72,18 +58,23 @@ function changeSlide(direction)
     slides[currentSlide].classList.add('active');
 }
 
-// lightbox
-function openLightbox(index)
+function openLightbox()
 {
-    currentLightboxIndex = index;
+    isSingleImage = false;
+    currentLightboxIndex = currentSlide;
     const lightbox = document.getElementById('lightbox');
-    document.getElementById('lightbox-img').src = projectImages[index];
+    document.getElementById('lightbox-img').src = projectImages[currentLightboxIndex];
+    document.querySelector('.lightbox-prev').style.display = 'block';
+    document.querySelector('.lightbox-next').style.display = 'block';
     lightbox.style.display = 'flex';
     setTimeout(() => lightbox.classList.add('active'), 10);
 }
 
+// navigate lightbox
 function lightboxNav(direction)
 {
+    // disable arrows for single images
+    if (isSingleImage) return;
     currentLightboxIndex = (currentLightboxIndex + direction + projectImages.length) % projectImages.length;
     const img = document.getElementById('lightbox-img');
     img.style.opacity = 0;
@@ -94,22 +85,13 @@ function lightboxNav(direction)
     }, 200);
 }
 
+// close lightbox
 function closeLightbox()
 {
     const lightbox = document.getElementById('lightbox');
     lightbox.classList.remove('active');
     setTimeout(() => lightbox.style.display = 'none', 300);
 }
-
-// keyboard navigation
-document.addEventListener('keydown', function(e)
-{
-    const lightbox = document.getElementById('lightbox');
-    if (!lightbox || !lightbox.classList.contains('active')) return;
-    if (e.key === 'ArrowLeft') lightboxNav(-1);
-    if (e.key === 'ArrowRight') lightboxNav(1);
-    if (e.key === 'Escape') closeLightbox();
-});
 
 // click background to close
 document.addEventListener('DOMContentLoaded', function()
@@ -122,4 +104,96 @@ document.addEventListener('DOMContentLoaded', function()
             if (e.target === lightbox) closeLightbox();
         });
     }
-})
+
+    // click slide to open lightbox
+    const track = document.querySelector('.slide-track');
+    if (track)
+    {
+        track.addEventListener('click', function()
+        {
+            openLightbox();
+        });
+    }
+});
+
+// // expand image in project
+// document.addEventListener('DOMContentLoaded', function()
+// {
+//     const lightbox = document.getElementById('lightbox');
+//     if (lightbox)
+//     {
+//         lightbox.addEventListener('click', function()
+//         {
+//             closeLightbox();
+//         });
+//     }
+// });
+
+// function openLightbox(img)
+// {
+//     const lightbox = document.getElementById('lightbox');
+//     document.getElementById('lightbox-img').src = img.src;
+//     lightbox.style.display = 'flex';
+//     setTimeout(() => lightbox.classList.add('active'), 10);
+// }
+
+// function closeLightbox()
+// {
+//     const lightbox = document.getElementById('lightbox');
+//     lightbox.classList.remove('active');
+//     setTimeout(() => lightbox.style.display = 'none', 300);
+// }
+
+
+
+// // lightbox
+// function openLightbox(index)
+// {
+//     currentLightboxIndex = index;
+//     const lightbox = document.getElementById('lightbox');
+//     document.getElementById('lightbox-img').src = projectImages[index];
+//     lightbox.style.display = 'flex';
+//     setTimeout(() => lightbox.classList.add('active'), 10);
+// }
+
+// function lightboxNav(direction)
+// {
+//     currentLightboxIndex = (currentLightboxIndex + direction + projectImages.length) % projectImages.length;
+//     const img = document.getElementById('lightbox-img');
+//     img.style.opacity = 0;
+//     setTimeout(() =>
+//     {
+//         img.src = projectImages[currentLightboxIndex];
+//         img.style.opacity = 1;
+//     }, 200);
+// }
+
+// function closeLightbox()
+// {
+//     const lightbox = document.getElementById('lightbox');
+//     lightbox.classList.remove('active');
+//     setTimeout(() => lightbox.style.display = 'none', 300);
+// }
+
+// // keyboard navigation
+// document.addEventListener('keydown', function(e)
+// {
+//     const lightbox = document.getElementById('lightbox');
+//     if (!lightbox || !lightbox.classList.contains('active')) return;
+//     if (e.key === 'ArrowLeft') lightboxNav(-1);
+//     if (e.key === 'ArrowRight') lightboxNav(1);
+//     if (e.key === 'Escape') closeLightbox();
+// });
+
+// // click background to close
+// document.addEventListener('DOMContentLoaded', function()
+// {
+//     const lightbox = document.getElementById('lightbox');
+//     if (lightbox)
+//     {
+//         lightbox.addEventListener('click', function(e)
+//         {
+//             if (e.target === lightbox) closeLightbox();
+//         });
+//     }
+// })
