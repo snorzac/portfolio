@@ -219,7 +219,7 @@ a:focus
 .project-card
 {
     display: block;
-    border: 2px solid rgb(255, 197, 211);
+    border: 3px solid rgb(255, 197, 211);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -271,7 +271,7 @@ a:focus
 
 .project-info p
 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     opacity: 0.9;
     line-height: 1.6;
     margin-bottom: 4px;
