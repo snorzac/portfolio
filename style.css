@@ -24,7 +24,7 @@
 footer
 {
     text-align: center;
-    font-size: 1rem;
+    font-size: large;
     margin-top: 10%;
     padding: 3px;
     background-color: rgb(255, 197, 211);
@@ -303,7 +303,7 @@ a:focus
 .back
 {
     color: rgb(240, 120, 150);
-    padding-top: 40px;
+    padding-top: 70px;
     padding-bottom: 10px;
 }
 
