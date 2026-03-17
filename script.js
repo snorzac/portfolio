@@ -3,7 +3,7 @@ if (document.querySelector('.auto-type'))
 {
     var typed = new Typed('.auto-type',
         {
-            strings: ["Hello! I am Isaac :)"],
+            strings: ["hello! i am isaac :)"],
             typeSpeed: 60
         }
     );
@@ -15,7 +15,7 @@ document.querySelectorAll('.nav-link').forEach(link =>
     link.addEventListener('click', () =>
     {
         const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse.classList.contains('show'))
+        if (navbarCollapse && navbarCollapse.classList.contains('show'))
         {
             const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
             bsCollapse.hide();
@@ -30,6 +30,7 @@ function openSingleImage(src)
 {
     isSingleImage = true;
     const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
     document.getElementById('lightbox-img').src = src;
     document.querySelector('.lightbox-prev').style.display = 'none';
     document.querySelector('.lightbox-next').style.display = 'none';
@@ -61,8 +62,11 @@ function changeSlide(direction)
 function openLightbox()
 {
     isSingleImage = false;
+
+    // sync with current card slide
     currentLightboxIndex = currentSlide;
     const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
     document.getElementById('lightbox-img').src = projectImages[currentLightboxIndex];
     document.querySelector('.lightbox-prev').style.display = 'block';
     document.querySelector('.lightbox-next').style.display = 'block';
@@ -89,6 +93,7 @@ function lightboxNav(direction)
 function closeLightbox()
 {
     const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
     lightbox.classList.remove('active');
     setTimeout(() => lightbox.style.display = 'none', 300);
 }
@@ -116,84 +121,12 @@ document.addEventListener('DOMContentLoaded', function()
     }
 });
 
-// // expand image in project
-// document.addEventListener('DOMContentLoaded', function()
-// {
-//     const lightbox = document.getElementById('lightbox');
-//     if (lightbox)
-//     {
-//         lightbox.addEventListener('click', function()
-//         {
-//             closeLightbox();
-//         });
-//     }
-// });
-
-// function openLightbox(img)
-// {
-//     const lightbox = document.getElementById('lightbox');
-//     document.getElementById('lightbox-img').src = img.src;
-//     lightbox.style.display = 'flex';
-//     setTimeout(() => lightbox.classList.add('active'), 10);
-// }
-
-// function closeLightbox()
-// {
-//     const lightbox = document.getElementById('lightbox');
-//     lightbox.classList.remove('active');
-//     setTimeout(() => lightbox.style.display = 'none', 300);
-// }
-
-
-
-// // lightbox
-// function openLightbox(index)
-// {
-//     currentLightboxIndex = index;
-//     const lightbox = document.getElementById('lightbox');
-//     document.getElementById('lightbox-img').src = projectImages[index];
-//     lightbox.style.display = 'flex';
-//     setTimeout(() => lightbox.classList.add('active'), 10);
-// }
-
-// function lightboxNav(direction)
-// {
-//     currentLightboxIndex = (currentLightboxIndex + direction + projectImages.length) % projectImages.length;
-//     const img = document.getElementById('lightbox-img');
-//     img.style.opacity = 0;
-//     setTimeout(() =>
-//     {
-//         img.src = projectImages[currentLightboxIndex];
-//         img.style.opacity = 1;
-//     }, 200);
-// }
-
-// function closeLightbox()
-// {
-//     const lightbox = document.getElementById('lightbox');
-//     lightbox.classList.remove('active');
-//     setTimeout(() => lightbox.style.display = 'none', 300);
-// }
-
-// // keyboard navigation
-// document.addEventListener('keydown', function(e)
-// {
-//     const lightbox = document.getElementById('lightbox');
-//     if (!lightbox || !lightbox.classList.contains('active')) return;
-//     if (e.key === 'ArrowLeft') lightboxNav(-1);
-//     if (e.key === 'ArrowRight') lightboxNav(1);
-//     if (e.key === 'Escape') closeLightbox();
-// });
-
-// // click background to close
-// document.addEventListener('DOMContentLoaded', function()
-// {
-//     const lightbox = document.getElementById('lightbox');
-//     if (lightbox)
-//     {
-//         lightbox.addEventListener('click', function(e)
-//         {
-//             if (e.target === lightbox) closeLightbox();
-//         });
-//     }
-// })
+// keyboard navigation
+document.addEventListener('keydown', function(e)
+{
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox || !lightbox.classList.contains('active')) return;
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+    if (e.key === 'Escape') closeLightbox();
+});

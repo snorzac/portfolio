@@ -24,19 +24,20 @@
 footer
 {
     text-align: center;
-    font-size: large;
+    font-size: 1rem;
     margin-top: 10%;
-    padding: 3px;
-    background-color: rgb(255, 197, 211);
+    /* padding: 3px; */
+    background-color: rgb(255, 218, 226);
     color: black;
 }
 
 .socials
 {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 10px;
-    font-size: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    font-size: 50px;
 }
 
 .row
@@ -57,21 +58,6 @@ body
     align-items: center;
     justify-content: center;
 }
-
-/* resume */
-/* resume */
-/* resume */
-.resume
-{
-    color: rgb(240, 120, 150);
-}
-
-.resume a:hover
-{
-    text-decoration: underline;
-    color: blue;
-}
-
 
 /* avatar */
 /* avatar */
@@ -312,12 +298,42 @@ a:focus
     font-weight: bold;
 }
 
-@media (max-width: 576px)
+@media (max-width: 480px)
 {
     .back
     {
         padding-top: 35px;
     }
+}
+
+.all-projects
+{
+    color: rgb(240, 120, 150);
+    text-align: right;
+}
+
+.all-projects a:hover
+{
+    font-weight: bold;
+}
+
+/* experiences */
+/* experiences */
+/* experiences */
+.exp
+{
+    padding-bottom: 1%;
+}
+
+.exp-img
+{
+    border: 3px solid rgb(255, 197, 211);
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 80%;
 }
 
 /* android */
@@ -379,6 +395,11 @@ a:focus
     cursor: pointer;
 }
 
+.projects
+{
+    padding-bottom: 10%;
+}
+
 .projects h1
 {
     padding-bottom: 10px;
@@ -391,13 +412,12 @@ a:focus
 
 .ext-link
 {
-    padding-top: 20px;
     color: rgb(240, 120, 150);
 }
 
 .ext-link a:hover
 {
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .fade-in-up
@@ -442,13 +462,8 @@ a:focus
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 0.4s ease, transform 0.3s ease;
+    transition: opacity 0.4s ease;
     cursor: pointer;
-}
-
-.slide-img:hover
-{
-    transform: scale(1.05);
 }
 
 .slide-img.active
