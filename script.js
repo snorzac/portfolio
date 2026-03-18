@@ -4,7 +4,7 @@ if (document.querySelector('.auto-type'))
     var typed = new Typed('.auto-type',
         {
             strings: ["hello! i am isaac :)"],
-            typeSpeed: 60
+            typeSpeed: 55
         }
     );
 }
