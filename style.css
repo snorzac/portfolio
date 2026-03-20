@@ -47,6 +47,7 @@
 body
 {
     font-family: 'JetBrains Mono', monospace;
+    overflow-x: hidden;
 }
 
 .sec1
@@ -132,6 +133,12 @@ a:focus
 {
     position: relative;
     margin-bottom: 40px;
+}
+
+.timeline-item-exp
+{
+    position: relative;
+    margin-bottom: 20px;
 }
 
 .timeline-dot
@@ -331,11 +338,6 @@ a:focus
 /* experiences */
 /* experiences */
 /* experiences */
-.exp
-{
-    padding-bottom: 1%;
-}
-
 .exp h4
 {
     font-size: 1.15rem;
