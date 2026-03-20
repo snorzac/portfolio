@@ -39,12 +39,12 @@ function openSingleImage(src)
 }
 
 // images array
-const projectImages =
-[
-    '../public/project-images/low-fi.png',
-    '../public/project-images/hi-fi1.png',
-    '../public/project-images/hi-fi2.png'
-];
+// const projectImages =
+// [
+//     'public/project-images/low-fi.png',
+//     'public/project-images/hi-fi1.png',
+//     'public/project-images/hi-fi2.png'
+// ];
 
 let currentSlide = 0;
 let currentLightboxIndex = 0;
@@ -63,6 +63,9 @@ function openLightbox()
 {
     isSingleImage = false;
 
+    // set active array
+    activeImages = projectImages;
+
     // sync with current card slide
     currentLightboxIndex = currentSlide;
     const lightbox = document.getElementById('lightbox');
@@ -79,12 +82,12 @@ function lightboxNav(direction)
 {
     // disable arrows for single images
     if (isSingleImage) return;
-    currentLightboxIndex = (currentLightboxIndex + direction + projectImages.length) % projectImages.length;
+    currentLightboxIndex = (currentLightboxIndex + direction + activeImages.length) % activeImages.length;
     const img = document.getElementById('lightbox-img');
     img.style.opacity = 0;
     setTimeout(() =>
     {
-        img.src = projectImages[currentLightboxIndex];
+        img.src = activeImages[currentLightboxIndex];
         img.style.opacity = 1;
     }, 200);
 }
@@ -130,3 +133,28 @@ document.addEventListener('keydown', function(e)
     if (e.key === 'ArrowRight') lightboxNav(1);
     if (e.key === 'Escape') closeLightbox();
 });
+
+// const refreshImages =
+// [
+//     'public/experiences/refresh1.webp',
+//     'public/experiences/refresh2.jpg',
+//     'public/experiences/refresh3.jpg'
+// ];
+
+// active array tracker
+let activeImages = [];
+
+// open lightbox with a specific array and index
+function openLightboxFromArray(images, index)
+{
+    isSingleImage = false;
+    activeImages = images;
+    currentLightboxIndex = index;
+    const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+    document.getElementById('lightbox-img').src = activeImages[currentLightboxIndex];
+    document.querySelector('.lightbox-prev').style.display = 'block';
+    document.querySelector('.lightbox-next').style.display = 'block';
+    lightbox.style.display = 'flex';
+    setTimeout(() => lightbox.classList.add('active'), 10);
+}

@@ -56,16 +56,15 @@
 
             
             <!-- card slideshow -->
-            <div class="row" style="padding-top: 32px;">
+            <div class="row" style="padding-top: 3%">
                 <div class="col-12 col-md-6">
                     <!-- ui/ux -->
                     <div class="card-slideshow">
                         <button class="slide-btn prev-btn" onclick="changeSlide(-1)">&#8592;</button>
                         <div class="slide-track">
-                            <img src="../public/project-images/low-fi.png" class="slide-img active">
-                            <img src="../public/project-images/hi-fi1.png" class="slide-img">
-                            <img src="../public/project-images/hi-fi2.png" class="slide-img">
-                            <img src="../public/project-images/sus.png" class="slide-img">
+                            <img src="../public/project-images/low-fi.png" onclick="openLightboxFromArray(projectImages, 0)" class="slide-img active">
+                            <img src="../public/project-images/hi-fi1.png" onclick="openLightboxFromArray(projectImages, 1)" class="slide-img">
+                            <img src="../public/project-images/hi-fi2.png" onclick="openLightboxFromArray(projectImages, 2)" class="slide-img">
                         </div>
                         <button class="slide-btn next-btn" onclick="changeSlide(1)">&#8594;</button>
                     </div>
@@ -84,6 +83,14 @@
         <script>w3.includeHTML();</script>
         <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const projectImages =
+            [
+                'project-images/low-fi.png',
+                'project-images/hi-fi1.png',
+                'project-images/hi-fi2.png'
+            ];
+        </script>
         <script src="../script.js"></script>
     </body>
 </html>

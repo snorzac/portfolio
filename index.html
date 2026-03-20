@@ -36,7 +36,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row headings" id="sec2">
+            <div class="row" id="sec2">
                 <section>
                     <h1>education</h1>
                     <div class="row">
@@ -68,7 +68,7 @@
                     </div>
                 </section>
             </div>
-            <div class="row headings" id="sec3">
+            <div class="row" id="sec3">
                 <section>
                     <h1>projects</h1>
                     <div class="row">
@@ -143,34 +143,42 @@
                     </div>
                 </section>
             </div>
-            <div class="row exp headings" id="sec4">
+            <div class="row" id="sec4">
                 <section>
                     <h1>experiences</h1>
                     <div class="row">
-                        <div class="col-12" style="padding-bottom: 1%;">
-                            <h4>Phone Diagnostics | Mar 2024 - Jun 2024</h4>
-                            <p>run full diagnostics for android and iphone devices through a computer software application that scans for any software-related issues.</p>
-                            <p>used the same software application to manually check for any hardware-related issues.</p>
-                            <p>learned how to efficiently and carefully replace faulty phone batteries with new ones.</p>
+                        <div class="col-12 exp">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4>Phone Diagnostics <span class="timeline-year">Mar 2024 - Jun 2024 (3 months)</span></h4>
+                                    <p>run full diagnostics for android and iphone devices through a computer software application that scans for any software-related issues.</p>
+                                    <p>used the same software application to manually check for any hardware-related issues.</p>
+                                    <p>learned how to efficiently and carefully replace faulty phone batteries with new ones.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12" style="padding-bottom: 1%;">
-                            <h4>NCS Internship | Apr 2023 - Sep 2023</h4>
-                            <p>assisted with the tech refresh project as a desktop engineer by supporting the management of sensitive information in computer storage.</p>
-                            <p>ensured proper sanitsation of information before sending for deployment.</p>
-                            <p>re-imaged laptops by accessing and configuring the bootloader's settings.</p>
+                        <div class="col-12 exp">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h4>NCS Internship <span class="timeline-year">Apr 2023 - Sep 2023 (6 months)</span></h4>
+                                    <p>assisted with the tech refresh project as a desktop engineer by supporting the management of sensitive information in computer storage.</p>
+                                    <p>ensured proper sanitsation of information before sending for deployment.</p>
+                                    <p>re-imaged laptops by accessing and configuring the bootloader's settings.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12" style="padding-bottom: 1%;">
+                        <div class="col-12 exp">
                             <h4>JW 360° (Japan Way 360°) | Dec 2020 - Apr 2021</h4>
                             <p>worked part time as a waiter, and other assigned duties like bartender and receptionist.</p>
                             <p>as a fast learner, i learned and handled the role as a bartender seamelessly and efficiently.</p>
                             <p>i gained much experience and confidence through interactions with customers and responding to their queries.</p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row exp">
                         <div class="col-12 col-md-6">
                             <h4>2025 Specialist Cadet School Graduation</h4>
                             <p>descripton</p>
@@ -179,25 +187,36 @@
                             <p>image here</p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row exp">
                         <div class="col-12 col-md-6">
                             <h4>Temasek Polytechnic's Project Refresh</h4>
-                            <p>description</p>
+                            <p>volunteered at the school's partnership with the North East Community Development Council (NECDC) in 2022.</p>
+                            <p>cleaned up houses, repainted walls and ceilings, chatted and spent bonding sessions with the elderlies through games and interactions.</p>
                         </div>
+
+                        <!-- card slideshow -->
                         <div class="col-12 col-md-6">
-                            <p>image here</p>
+                            <div class="card-slideshow" style="width: 80%;">
+                                <button class="slide-btn prev-btn" onclick="changeSlide(-1)">&#8592;</button>
+                                <div class="slide-track">
+                                    <img src="public/experiences/refresh1.webp" onclick="openLightboxFromArray(refreshImages, 0)" class="slide-img active">
+                                    <img src="public/experiences/refresh2.jpg" onclick="openLightboxFromArray(refreshImages, 1)" class="slide-img">
+                                    <img src="public/experiences/refresh3.jpg" onclick="openLightboxFromArray(refreshImages, 2)" class="slide-img">
+                                </div>
+                                <button class="slide-btn next-btn" onclick="changeSlide(1)">&#8594;</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row exp">
                         <div class="col-12 col-md-6">
                             <h4>Temasek Polytechnic's Clean Up By The Coast</h4>
                             <p>description</p>
                         </div>
                         <div class="col-12 col-md-6">
-                            <p>image here</p>
+                            <img src="public/experiences/clean-up.jpg" class="img-fluid exp-img" onclick="openSingleImage(this.src)" style="max-width: 70%; height: auto; display: block;">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row exp">
                         <div class="col-12 col-md-6">
                             <h4>2019 Shanghai Cultural Exchange</h4>
                             <p>selected as 1 of 30 students chosen out of 80 applicants to represent the school on a cultural exchange trip to Shanghai, through shortlisting and interview process.</p>
@@ -207,7 +226,7 @@
                             <img src="public/experiences/shanghai.jpg" class="img-fluid exp-img" onclick="openSingleImage(this.src)">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row exp">
                         <div class="col-12 col-md-6">
                             <h4>2019 Singapore Youth Festival</h4>
                             <p>represented the school by partitipating in the 2019 Singapore Youth Festival in 2019 as a trumpeter in the school's symphonic band.</p>
@@ -236,6 +255,14 @@
         <script>w3.includeHTML();</script>
         <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const refreshImages =
+            [
+                'public/experiences/refresh1.webp',
+                'public/experiences/refresh2.jpg',
+                'public/experiences/refresh3.jpg'
+            ];
+        </script>
         <script src="script.js"></script>
     </body>
 </html>

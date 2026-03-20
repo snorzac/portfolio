@@ -30,11 +30,6 @@
     }
 }
 
-.headings h1
-{
-    font-size: 1.7rem;
-}
-
 footer
 {
     text-align: center;
@@ -181,6 +176,7 @@ a:focus
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 4px;
+    opacity: 0.8;
 }
 
 @media (max-width: 768px)
@@ -352,15 +348,14 @@ a:focus
 
 .exp h4
 {
-    font-size: 1.5rem;
-    /* margin: 0 0 4px 0; */
+    font-size: 1.15rem;
 }
 
 .exp p
 {
     font-size: 1rem;
     line-height: 1.6;
-    /* margin-bottom: 4px; */
+    opacity: 0.8;
 }
 
 .exp-img
@@ -392,7 +387,6 @@ a:focus
         width: 100%;
     }
 }
-
 
 /* android */
 /* android */
@@ -443,12 +437,21 @@ a:focus
     opacity: 1;
 }
 
+@media (max-width: 768px)
+{
+    .lightbox img
+    {
+        max-width: 100%;
+    }
+}
+
 .lightbox-close
 {
     position: absolute;
+    opacity: 0.8;
     top: 20px;
     right: 30px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: white;
     cursor: pointer;
 }
