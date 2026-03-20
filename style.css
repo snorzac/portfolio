@@ -25,27 +25,17 @@
 {
     .container
     {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
-}
-
-footer
-{
-    text-align: center;
-    font-size: 1rem;
-    margin-top: 10%;
-    /* padding: 3px; */
-    background-color: rgb(255, 218, 226);
-    color: black;
 }
 
 .socials
 {
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 40px;
-    padding-top: 20px;
+    padding-bottom: 5%;
+    padding-top: 10px;
     font-size: 50px;
 }
 
@@ -369,12 +359,23 @@ a:focus
     width: 80%;
 }
 
+.exp-img-refresh
+{
+    border: 3px solid rgb(255, 197, 211);
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 80%;
+}
+
 @media (max-width: 768px)
 {
     .exp h4
     {
         font-size: 1.13rem;
-        padding-top: 2%;
+        padding-top: 1%;
     }
 
     .exp p
@@ -385,6 +386,16 @@ a:focus
     .exp-img
     {
         width: 100%;
+    }
+
+    .exp-img-refresh
+    {
+        width: 100%;
+    }
+
+    .exp-img-cleanup
+    {
+        margin: 0 auto;
     }
 }
 
@@ -500,16 +511,24 @@ a:focus
 .card-slideshow
 {
     position: relative;
-    width: 100%;
+    width: 80%;
     overflow: hidden;
     border: 3px solid rgb(255, 197, 211);
     border-radius: 10px;
 }
 
+@media (max-width: 768px)
+{
+    .card-slideshow
+    {
+        max-width: 100% !important;
+        margin: 0 auto;
+    }
+}
+
 .slide-track
 {
     overflow: hidden;
-    /* position: relative; */
     width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: 10px;

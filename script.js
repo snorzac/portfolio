@@ -50,13 +50,21 @@ let currentSlide = 0;
 let currentLightboxIndex = 0;
 
 // card slideshow
-function changeSlide(direction)
+function changeSlide(direction, btn)
 {
-    const slides = document.querySelectorAll('.slide-img');
+    const slideshow = btn.closest('.card-slideshow');
+    const slides = slideshow.querySelectorAll('.slide-img');
     if (!slides.length) return;
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
+
+    const current = slideshow.querySelector('.slide-img.active');
+    const currentIndex = Array.from(slides).indexOf(current);
+    const nextIndex = (currentIndex + direction + slides.length) % slides.length;
+
+    current.classList.remove('active');
+    slides[nextIndex].classList.add('active');
+
+    // update currentSlide for lightbox sync
+    currentSlide = nextIndex;
 }
 
 function openLightbox()
@@ -113,15 +121,20 @@ document.addEventListener('DOMContentLoaded', function()
         });
     }
 
-    // click slide to open lightbox
-    const track = document.querySelector('.slide-track');
-    if (track)
+    // handle slideshow clicks
+    document.querySelectorAll('.card-slideshow').forEach(slideshow =>
     {
-        track.addEventListener('click', function()
+        slideshow.addEventListener('click', function(e)
         {
-            openLightbox();
+            // ignore if clicking buttons
+            if (e.target.classList.contains('slide-btn') || e.target.closest('.slide-btn')) return;
+
+            const slides = Array.from(slideshow.querySelectorAll('.slide-img'));
+            const currentIndex = slides.findIndex(s => s.classList.contains('active'));
+            const images = slides.map(s => s.src);
+            openLightboxFromArray(images, currentIndex);
         });
-    }
+    });
 });
 
 // keyboard navigation
