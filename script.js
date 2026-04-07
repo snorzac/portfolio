@@ -30,7 +30,7 @@ backBtn.addEventListener('click', function(e)
     else if (referrer.includes('projects.html') || referrer.includes('/projects/'))
     {
         // came from projects listing page
-        window.location.href = '../';
+        window.location.href = '..//projects.html';
     }
 
     else
