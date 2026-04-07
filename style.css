@@ -5,7 +5,7 @@
 /* change highlight colour */
 ::selection
 {
-    background: rgb(255, 197, 211);
+    background: grey;
     color: #000;
 }
 
@@ -18,7 +18,18 @@
     left: 0;
     width: 100%;
     z-index: 9999;
-    background-color: rgb(255, 218, 226);
+    background-color: rgb(54, 54, 54);
+    font-size: 1.2rem;
+}
+
+.navbar a
+{
+    color: grey !important;
+}
+
+.navbar a:hover
+{
+    color: white !important;
 }
 
 @media (max-width: 768px)
@@ -39,6 +50,16 @@
     font-size: 50px;
 }
 
+.icon
+{
+    color: grey;
+}
+
+.icon a:hover
+{
+    color: white;
+}
+
 .row
 {
     scroll-margin-top: 70px;
@@ -48,6 +69,9 @@ body
 {
     font-family: 'JetBrains Mono', monospace;
     overflow-x: hidden;
+    color: white;
+    /* background-color: rgb(18, 18, 18); */
+    background-color: rgb(26, 26, 26);
 }
 
 .sec1
@@ -113,7 +137,6 @@ a:focus
 .timeline
 {
     position: relative;
-    margin-top: 24px;
     padding-left: 38px;
 }
 
@@ -121,18 +144,17 @@ a:focus
 {
     content: '';
     position: absolute;
-    left: 14px;
+    left: 13px;
     top: 6px;
     bottom: 0;
     width: 1px;
-    background-color: rgb(255, 197, 211);
-    opacity: 0.3;
+    background-color: white;
+    opacity: 0.5;
 }
 
 .timeline-item
 {
     position: relative;
-    margin-bottom: 40px;
 }
 
 .timeline-item-exp
@@ -149,8 +171,8 @@ a:focus
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: rgb(255, 197, 211);
-    opacity: 0.6;
+    background-color: grey;
+    opacity: 1;
 }
 
 .timeline-year
@@ -223,7 +245,8 @@ a:focus
 .project-card
 {
     display: block;
-    border: 3px solid rgb(255, 197, 211);
+    /* border: 3px solid rgb(255, 197, 211); */
+    border: 3px solid grey;
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -298,15 +321,15 @@ a:focus
     padding: 2px 8px;
     margin-bottom: 10px;
     border-radius: 20px;
-    border: 2px solid rgb(255, 197, 211);
+    border: 2px solid grey;
     columns: inherit;
     opacity: 1;
-    background-color: rgb(255, 197, 211);
+    background-color: grey;
 }
 
 .back
 {
-    color: rgb(240, 120, 150);
+    color: white;
     padding-top: 70px;
     padding-bottom: 10px;
 }
@@ -326,7 +349,8 @@ a:focus
 
 .all-projects
 {
-    color: rgb(240, 120, 150);
+    /* color: rgb(240, 120, 150); */
+    color: white;
     text-align: right;
 }
 
@@ -352,7 +376,7 @@ a:focus
 
 .exp-img
 {
-    border: 3px solid rgb(255, 197, 211);
+    border: 3px solid white;
     display: block;
     border-radius: 15px;
     overflow: hidden;
@@ -363,7 +387,7 @@ a:focus
 
 .exp-img-refresh
 {
-    border: 3px solid rgb(255, 197, 211);
+    border: 3px solid white;
     display: block;
     border-radius: 15px;
     overflow: hidden;
@@ -406,7 +430,7 @@ a:focus
 /* android */
 .project-img
 {
-    border: 3px solid rgb(255, 197, 211);
+    border: 3px solid white;
     display: block;
     border-radius: 15px;
     overflow: hidden;
@@ -486,7 +510,7 @@ a:focus
 
 .ext-link
 {
-    color: rgb(240, 120, 150);
+    text-decoration: underline;
 }
 
 .ext-link a:hover
@@ -515,7 +539,7 @@ a:focus
     position: relative;
     width: 80%;
     overflow: hidden;
-    border: 3px solid rgb(255, 197, 211);
+    border: 3px solid white;
     border-radius: 10px;
 }
 
@@ -559,7 +583,7 @@ a:focus
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    background: rgba(255, 197, 211, 0.6);
+    background: grey;
     border: none;
     border-radius: 50%;
     width: 32px;
