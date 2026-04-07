@@ -9,51 +9,6 @@ if (document.querySelector('.auto-type'))
     );
 }
 
-// context-aware back button
-const backBtn = document.getElementById('back-btn');
-
-// detect referrer page
-const referrer = document.referrer;
-
-backBtn.addEventListener('click', function(e)
-{
-    // prevents default link behavior
-    e.preventDefault();
-
-    // check if coming from home page
-    if (referrer.includes('index.html') || referrer.endsWith('/'))
-    {
-        // go back to home page
-        window.location.href = '../index.html#sec3';
-    }
-
-    else if (referrer.includes('projects.html') || referrer.includes('/projects/'))
-    {
-        // came from projects listing page
-        window.location.href = '../projects.html';
-    }
-
-    else
-    {
-        // default: just go back in history
-        window.history.back();
-    }
-});
-
-// close navbar on mobile when nav link is clicked
-document.querySelectorAll('.nav-link').forEach(link =>
-{
-    link.addEventListener('click', () =>
-    {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse && navbarCollapse.classList.contains('show'))
-        {
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide();
-        }
-    });
-});
-
 let isSingleImage = false;
 
 // for single images outside the slideshow
