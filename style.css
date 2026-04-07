@@ -9,6 +9,11 @@
     color: #000;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 /* navbar */
 /* navbar */
 /* navbar */
