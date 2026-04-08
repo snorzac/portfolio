@@ -37,6 +37,20 @@ html
     color: white !important;
 }
 
+/* hamburger icon */
+/* hamburger icon */
+/* hamburger icon */
+.navbar-toggler
+{
+    /* border-color: rgb(200, 200, 200); */
+    border-color: grey;
+}
+
+.navbar-toggler-icon
+{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(200, 200, 200, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 @media (max-width: 768px)
 {
     .container
@@ -554,6 +568,11 @@ a:focus
     {
         max-width: 100% !important;
         margin: 0 auto;
+    }
+
+    .timeline
+    {
+        padding-left: 20px;
     }
 }
 

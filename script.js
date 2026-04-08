@@ -9,6 +9,40 @@ if (document.querySelector('.auto-type'))
     );
 }
 
+// close navbar dropdown when clicked on mobile
+document.querySelectorAll('.nav-link').forEach(link =>
+{
+    link.addEventListener('click', () =>
+    {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse && navbarCollapse.classList.contains('show'))
+        {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
+        }
+    });
+});
+
+// context-aware back button
+document.addEventListener('DOMContentLoaded', () =>
+{
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get('from');
+
+    const backBtn = document.getElementById('back-btn');
+    if (!backBtn) return;
+
+    if (from == 'projects')
+    {
+        backBtn.href = 'projects.html';
+    }
+
+    else
+    {
+        backBtn.href = 'index.html#sec3';
+    }
+});
+
 let isSingleImage = false;
 
 // for single images outside the slideshow
@@ -23,14 +57,6 @@ function openSingleImage(src)
     lightbox.style.display = 'flex';
     setTimeout(() => lightbox.classList.add('active'), 10);
 }
-
-// images array
-// const projectImages =
-// [
-//     'public/project-images/low-fi.png',
-//     'public/project-images/hi-fi1.png',
-//     'public/project-images/hi-fi2.png'
-// ];
 
 let currentSlide = 0;
 let currentLightboxIndex = 0;
@@ -132,13 +158,6 @@ document.addEventListener('keydown', function(e)
     if (e.key === 'ArrowRight') lightboxNav(1);
     if (e.key === 'Escape') closeLightbox();
 });
-
-// const refreshImages =
-// [
-//     'public/experiences/refresh1.webp',
-//     'public/experiences/refresh2.jpg',
-//     'public/experiences/refresh3.jpg'
-// ];
 
 // active array tracker
 let activeImages = [];
