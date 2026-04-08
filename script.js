@@ -15,34 +15,9 @@ document.querySelectorAll('.nav-link').forEach(link =>
     link.addEventListener('click', () =>
     {
         const navbarCollapse = document.querySelector('.navbar-collapse');
-        if (navbarCollapse && navbarCollapse.classList.contains('show'))
+        if (navbarCollapse.classList.contains('show'))
         {
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse);
-            bsCollapse.hide();
-        }
-    });
-});
-
-// context-aware back button
-document.addEventListener('DOMContentLoaded', () =>
-{
-    const backBtn = document.getElementById('back-btn');
-    if (!backBtn) return;
-
-    const from = localStorage.getItem('projectFrom');
-
-    backBtn.addEventListener('click', (e) =>
-    {
-        e.preventDefault();
-
-        if (from == 'projects')
-        {
-            window.location.href = '../projects.html';
-        }
-
-        else
-        {
-            window.location.href = '../index.html#sec3';
+            new bootstrap.Collapse(navbarCollapse).hide();
         }
     });
 });

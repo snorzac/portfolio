@@ -346,26 +346,6 @@ a:focus
     background-color: grey;
 }
 
-.back
-{
-    color: white;
-    padding-top: 70px;
-    padding-bottom: 10px;
-}
-
-.back a:hover
-{
-    font-weight: bold;
-}
-
-@media (max-width: 480px)
-{
-    .back
-    {
-        padding-top: 35px;
-    }
-}
-
 .all-projects
 {
     /* color: rgb(240, 120, 150); */
@@ -556,7 +536,7 @@ a:focus
 .card-slideshow
 {
     position: relative;
-    width: 80%;
+    width: 100%;
     overflow: hidden;
     border: 3px solid white;
     border-radius: 10px;
