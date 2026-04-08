@@ -26,21 +26,25 @@ document.querySelectorAll('.nav-link').forEach(link =>
 // context-aware back button
 document.addEventListener('DOMContentLoaded', () =>
 {
-    const params = new URLSearchParams(window.location.search);
-    const from = params.get('from');
-
     const backBtn = document.getElementById('back-btn');
     if (!backBtn) return;
 
-    if (from == 'projects')
-    {
-        backBtn.href = 'projects.html';
-    }
+    const from = localStorage.getItem('projectFrom');
 
-    else
+    backBtn.addEventListener('click', (e) =>
     {
-        backBtn.href = 'index.html#sec3';
-    }
+        e.preventDefault();
+
+        if (from == 'projects')
+        {
+            window.location.href = '../projects.html';
+        }
+
+        else
+        {
+            window.location.href = '../index.html#sec3';
+        }
+    });
 });
 
 let isSingleImage = false;
