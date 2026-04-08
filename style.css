@@ -587,7 +587,9 @@ a:focus
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    background: grey;
+    background: black;
+    opacity: 0.7;
+    color: white;
     border: none;
     border-radius: 50%;
     width: 32px;
@@ -614,9 +616,9 @@ a:focus
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 197, 211, 0.3);
+    background-color: grey;
     border: none;
-    color: white;
+    color: black;
     font-size: 2rem;
     padding: 10px 16px;
     cursor: pointer;
@@ -626,10 +628,97 @@ a:focus
 
 .lightbox-prev
 {
-    left: 20px;
+    left: 5%;
 }
 
 .lightbox-next
 {
-    right: 20px;
+    right: 5%;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+/* hide the images by default */
+.mySlides
+{
+    display: block;
+}
+
+/* slideshow container */
+.slideshow-container
+{
+    max-width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.slideshow-container img
+{
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+/* next and previous buttons */
+.prev, .next
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* position the "next button" to the right */
+.next
+{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* on hover, add a black background colour with a little bit see through */
+.prev:hover, .next:hover
+{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* number text */
+.numbertext
+{
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* fading animation */
+.slide-fade
+{
+    animation-name: slide-fade;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+@keyframes slide-fade
+{
+    from
+    {
+        opacity: .4;
+    }
+
+    to
+    {
+        opacity: 1;
+    }
 }
