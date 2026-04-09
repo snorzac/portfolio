@@ -358,72 +358,6 @@ a:focus
     font-weight: bold;
 }
 
-/* experiences */
-/* experiences */
-/* experiences */
-.exp h4
-{
-    font-size: 1.15rem;
-}
-
-.exp p
-{
-    font-size: 1rem;
-    line-height: 1.6;
-    opacity: 0.8;
-}
-
-.exp-img
-{
-    border: 3px solid white;
-    display: block;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    width: 80%;
-}
-
-.exp-img-refresh
-{
-    border: 3px solid white;
-    display: block;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    width: 80%;
-}
-
-@media (max-width: 768px)
-{
-    .exp h4
-    {
-        font-size: 1.13rem;
-        padding-top: 1%;
-    }
-
-    .exp p
-    {
-        font-size: 0.87rem;
-    }
-
-    .exp-img
-    {
-        width: 100%;
-    }
-
-    .exp-img-refresh
-    {
-        width: 100%;
-    }
-
-    .exp-img-cleanup
-    {
-        margin: 0 auto;
-    }
-}
-
 /* android */
 /* android */
 /* android */
@@ -437,59 +371,32 @@ a:focus
     cursor: pointer;
 }
 
-.lightbox
+#lightbox
 {
     display: none;
     position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.85);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
     z-index: 9999;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    /* cursor: pointer; */
 }
 
-.lightbox.active
+#lightbox.active
 {
     display: flex;
-    opacity: 1;
 }
 
-.lightbox img
+#lightbox img
 {
     max-width: 90%;
     max-height: 90vh;
-    border-radius: 8px;
     object-fit: contain;
-    transform: translateY(40px);
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    opacity: 0;
-}
-
-.lightbox.active img
-{
-    transform: translateY(0);
-    opacity: 1;
-}
-
-@media (max-width: 768px)
-{
-    .lightbox img
-    {
-        max-width: 100%;
-    }
-}
-
-.lightbox-close
-{
-    position: absolute;
-    opacity: 0.8;
-    top: 20px;
-    right: 30px;
-    font-size: 1.7rem;
-    color: white;
-    cursor: pointer;
+    border-radius: 4px;
 }
 
 .projects
@@ -616,24 +523,50 @@ a:focus
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: grey;
-    border: none;
-    color: black;
+    color: white;
     font-size: 2rem;
-    padding: 10px 16px;
     cursor: pointer;
-    border-radius: 4px;
-    z-index: 10;
+    padding: 10px 20px;
+    user-select: none;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover
+{
+    opacity: 1;
 }
 
 .lightbox-prev
 {
-    left: 5%;
+    left: 20px;
 }
 
 .lightbox-next
 {
-    right: 5%;
+    right: 20px;
+}
+
+.lightbox-close
+{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.lightbox-close:hover
+{
+    opacity: 1;
+}
+
+.lightbox-trigger
+{
+    width: 100%;
+    cursor: pointer;
 }
 
 *
@@ -650,9 +583,10 @@ a:focus
 /* slideshow container */
 .slideshow-container
 {
-    max-width: 100%;
+    max-width: 80%;
     position: relative;
     cursor: pointer;
+    padding-bottom: 35px;
 }
 
 .slideshow-container img
@@ -662,6 +596,7 @@ a:focus
     object-fit: cover;
     object-position: center;
 }
+
 /* next and previous buttons */
 .prev, .next
 {
@@ -702,11 +637,36 @@ a:focus
     top: 0;
 }
 
+/* dots/bullets/indicators */
+.dot
+{
+    cursor: pointer;
+    height: 7px;
+    width: 7px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active .dot:hover
+{
+    background-color: white;
+}
+
+.dots-container
+{
+    position: absolute;
+    /* bottom: 8px; */
+    width: 100%;
+    text-align: center;
+}
+
 /* fading animation */
 .slide-fade
 {
     animation-name: slide-fade;
-    animation-duration: 1s;
     opacity: 1;
 }
 
@@ -721,4 +681,14 @@ a:focus
     {
         opacity: 1;
     }
+}
+
+/* single image */
+.single-image
+{
+    width: 80%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
 }
