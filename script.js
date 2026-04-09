@@ -14,15 +14,17 @@ if (document.querySelector('.auto-type'))
 }
 
 // close navbar dropdown when clicked on mobile
-document.querySelectorAll('.nav-link').forEach(link =>
+document.querySelectorAll('.navbar-nav a').forEach(function(link)
 {
-    link.addEventListener('click', () =>
+    link.addEventListener('click', function()
     {
         const navbarCollapse = document.querySelector('.navbar-collapse');
+        
         if (navbarCollapse.classList.contains('show'))
         {
-            new bootstrap.Collapse(navbarCollapse).hide();
-        }
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            bsCollapse.hide();
+        };
     });
 });
 
