@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Restaurant Review Website
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+
+    <body>
+        <div class="container projects">
+            <div class="row">
+                <div class="col-12">
+                    <h1 style="padding-top: 3%;">restaurant review website</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="../public/project-images/restaurant.png" class="lightbox-trigger single-image" data-group="restaurant" data-index="0">
+
+                </div>
+                <div class="col-12 col-md-6">
+                    <h4>android studio</h4>
+                    <p>my first individual school coding project where i built a fully functional music player app in android studio using java.</p>
+                    <p>developed alongside my ui/ux module, i had the experience to practice the full product design cycle from wireframe to implementation.</p>
+                    <h5>features:</h5>
+                    <ul>
+                        <li>playback controls: play, pause, next, previous, repeat, and shuffle</li>
+                        <li>register and delete user accounts</li>
+                        <li>firebase authentication for secure user login</li>
+                    </ul>
+                    <div class="ext-link">
+                        <a href="https://www.youtube.com/watch?v=xYJYrz0CrxE" target="_blank">view my full video demo here!</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- slideshow -->
+            <div class="row" style="padding-top: 3%">
+                <div class="col-12 col-md-6">
+                    <div class="slideshow-container" id="slideshow-android">
+                        <div class="mySlides slide-fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="../public/project-images/hi-fi1.png" style="width: 100%;" class="lightbox-trigger" data-group="androiduiux" data-index="0">
+                        </div>
+                        <div class="mySlides slide-fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="../public/project-images/hi-fi2.png" style="width: 100%;" class="lightbox-trigger" data-group="androiduiux" data-index="1">
+                        </div>
+                        <div class="mySlides slide-fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="../public/project-images/low-fi.png" style="width: 100%;" class="lightbox-trigger" data-group="androiduiux" data-index="2">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow-android')">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow-android')">&#10095;</a>
+
+                        <div class="dots-container">
+                            <span class="dot" onclick="currentSlide(1, 'slideshow-android')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'slideshow-android')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'slideshow-android')"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h4>adobe xd</h4>
+                    <p>before writing any code, i designed the app's interface in Adobe XD, creating both lo-fi wireframes to map out the user flow and hi-fi prototypes to finalise the visual design.</p>
+                    <p>to validate the design, i conducted usability testing and collected user feedback using the system usability scale (SUS) survey, using the results to refine the ui before development.</p>
+                    <div class="ext-link">
+                        <a href="https://xd.adobe.com/view/1a208697-eed7-4b7b-b6b7-0f093c7023ff-4f73/?fullscreen&hints=off" target="_blank">try out my hi-fi project here!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <a class="lightbox-prev" onclick="changeLightboxSlide(-1)">&#10094;</a>
+            <img id="lightbox-img" src="">
+            <a class="lightbox-next" onclick="changeLightboxSlide(1)">&#10095;</a>
+        </div>
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <script>w3.includeHTML();</script>
+        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../script.js"></script>
+    </body>
+</html>

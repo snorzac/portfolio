@@ -126,12 +126,17 @@ if (document.getElementById('lightbox'))
         [
             `${basePath}/public/project-images/android.png`
         ],
-        
+
         androiduiux:
         [
             `${basePath}/public/project-images/hi-fi1.png`,
             `${basePath}/public/project-images/hi-fi2.png`,
             `${basePath}/public/project-images/low-fi.png`
+        ],
+
+        restaurant:
+        [
+            `${basePath}/public/project-images/restaurant.png`,
         ]
     };
     

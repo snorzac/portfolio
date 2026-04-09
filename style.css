@@ -174,6 +174,7 @@ a:focus
 .timeline-item
 {
     position: relative;
+    padding-bottom: 30px;
 }
 
 .timeline-item-exp
@@ -197,7 +198,7 @@ a:focus
 .timeline-year
 {
     font-size: 0.75rem;
-    opacity: 0.8;
+    opacity: 0.5;
     letter-spacing: 0.05em;
     display: block;
     margin-bottom: 6px;
@@ -219,6 +220,17 @@ a:focus
 
 @media (max-width: 768px)
 {
+    .timeline-dot
+    {
+        left: -10px;
+        top: 4px;
+    }
+
+    .timeline-item
+    {
+        padding-bottom: 30px;
+    }
+
     .timeline-content h4
     {
         font-size: 1.13rem;
@@ -356,19 +368,6 @@ a:focus
 .all-projects a:hover
 {
     font-weight: bold;
-}
-
-/* android */
-/* android */
-/* android */
-.project-img
-{
-    border: 3px solid white;
-    display: block;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
 }
 
 #lightbox
