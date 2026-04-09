@@ -90,6 +90,7 @@ if (document.getElementById('lightbox'))
 
     const lightboxGroups =
     {
+        //experiences image
         scs:
         [
             `${basePath}/public/experiences/scs1.jpg`,
@@ -118,6 +119,19 @@ if (document.getElementById('lightbox'))
         syf:
         [
             `${basePath}/public/experiences/syf.jpg`
+        ],
+
+        // project images
+        android:
+        [
+            `${basePath}/public/project-images/android.png`
+        ],
+        
+        androiduiux:
+        [
+            `${basePath}/public/project-images/hi-fi1.png`,
+            `${basePath}/public/project-images/hi-fi2.png`,
+            `${basePath}/public/project-images/low-fi.png`
         ]
     };
     
