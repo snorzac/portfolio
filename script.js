@@ -1,3 +1,7 @@
+const basePath = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+? ''
+: '/portfolio';
+
 // typing animation
 if (document.querySelector('.auto-type'))
 {
@@ -88,32 +92,32 @@ if (document.getElementById('lightbox'))
     {
         scs:
         [
-            'public/experiences/scs1.jpg',
-            'public/experiences/scs2.jpg',
-            'public/experiences/scs3.jpg',
-            'public/experiences/scs4.jpg'    
+            `${basePath}/public/experiences/scs1.jpg`,
+            `${basePath}/public/experiences/scs2.jpg`,
+            `${basePath}/public/experiences/scs3.jpg`,
+            `${basePath}/public/experiences/scs4.jpg`
         ],
 
         refresh:
         [
-            'public/experiences/refresh1.webp',
-            'public/experiences/refresh2.jpg',
-            'public/experiences/refresh3.jpg'
+            `${basePath}/public/experiences/refresh1.webp`,
+            `${basePath}/public/experiences/refresh2.jpg`,
+            `${basePath}/public/experiences/refresh3.jpg`
         ],
 
         cleanup:
         [
-            'public/experiences/clean-up.jpg'
+            `${basePath}/public/experiences/clean-up.jpg`
         ],
 
         shanghai:
         [
-            'public/experiences/shanghai.jpg'
+            `${basePath}/public/experiences/shanghai.jpg`
         ],
 
         syf:
         [
-            'public/experiences/syf.jpg'
+            `${basePath}/public/experiences/syf.jpg`
         ]
     };
     
