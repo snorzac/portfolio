@@ -115,7 +115,11 @@ if (document.getElementById('lightbox'))
 
         shanghai:
         [
-            `${basePath}/public/experiences/shanghai.jpg`
+            `${basePath}/public/experiences/shanghai1.jpg`,
+            `${basePath}/public/experiences/shanghai2.jpeg`,
+            `${basePath}/public/experiences/shanghai3.jpeg`,
+            `${basePath}/public/experiences/shanghai4.jpeg`,
+            `${basePath}/public/experiences/shanghai5.jpeg`
         ],
 
         syf:
