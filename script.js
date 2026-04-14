@@ -143,6 +143,11 @@ if (document.getElementById('lightbox'))
         restaurant:
         [
             `${basePath}/public/project-images/restaurant.png`,
+        ],
+
+        ehip:
+        [
+            `${basePath}/public/project-images/kali-thumbnail.png`
         ]
     };
     
