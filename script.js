@@ -2,13 +2,15 @@ const basePath = window.location.hostname === 'localhost' || window.location.hos
 ? ''
 : '/portfolio';
 
+w3.includeHTML();
+
 // typing animation
 if (document.querySelector('.auto-type'))
 {
     var typed = new Typed('.auto-type',
         {
             strings: ["hello! i am isaac :)"],
-            typeSpeed: 50
+            typeSpeed: 70
         }
     );
 }
@@ -43,7 +45,9 @@ function plusSlides(n, containerId)
 function currentSlide(n, containerId)
 {
     const container = document.getElementById(containerId);
-    goToSlide(container, n);
+
+    // 0 = no animation
+    goToSlide(container, n, 0);
 }
 
 function changeSlide(container, n)
@@ -62,18 +66,52 @@ function changeSlide(container, n)
         index = slides.length;
     }
 
-    goToSlide(container, index);
+    // pass n as direction
+    goToSlide(container, index, n);
 }
 
-function goToSlide(container, n)
+function goToSlide(container, n, direction)
 {
     const slides = container.querySelectorAll('.mySlides');
     const dots = container.querySelectorAll('.dot');
 
-    slides.forEach(s => s.style.display = 'none');
+    slides.forEach(s =>
+    {
+        s.style.display = 'none';
+        s.classList.remove('slide-in-right', 'slide-in-left');
+    });
     dots.forEach(d => d.className = 'dot');
 
-    slides[n - 1].style.display = 'block';
+    const activeSlide = slides[n - 1];
+    activeSlide.style.display = 'block';
+
+    // small timeout lets the browser register display:block before animating
+    setTimeout(() =>
+    {
+        if (direction === 1)
+        {
+            activeSlide.classList.add('slide-in-right');
+        }
+
+        else if (direction === -1)
+        {
+            activeSlide.classList.add('slide-in-left');
+        }
+    }, 10);
+
+    // // apply direction animation
+    // if (direction === 1)
+    // {
+    //     // coming from right
+    //     activeSlide.classList.add('slide-in-right');
+    // }
+
+    // else if (direction === -1)
+    // {
+    //     // coming from left
+    //     activeSlide.classList.add('slide-in-left');
+    // }
+
     dots[n - 1].className = 'dot active';
     container.dataset.index = n;
 }
@@ -81,7 +119,7 @@ function goToSlide(container, n)
 // initialise all slideshows
 document.querySelectorAll('.slideshow-container').forEach(function(container)
 {
-    goToSlide(container, 1);
+    goToSlide(container, 1, 0);
 });
 
 // new lightbox
@@ -206,3 +244,44 @@ if (document.getElementById('lightbox'))
         if (e.key === 'Escape') closeLightbox();
     });
 }
+
+// moving slides with finger swipe
+document.querySelectorAll('.slideshow-container').forEach(function(container)
+{
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    container.addEventListener('touchstart', function(e)
+    {
+        touchStartX = e.changedTouches[0].screenX;
+    },
+    {
+        passive: true
+    });
+
+    container.addEventListener('touchend', function(e)
+    {
+        touchendX = e.changedTouches[0].screenX;
+
+        const diff = touchStartX - touchendX;
+
+        // only register as swipe if finger moved more than 50px
+        if (Math.abs(diff) > 50)
+        {
+            if (diff > 0)
+            {
+                //swiped left = next
+                plusSlides(1, container.id);
+            }
+
+            else
+            {
+                // swiped right = prev
+                plusSlides(-1, container.id);
+            }
+        }
+    },
+    {
+        passive: true
+    });
+});

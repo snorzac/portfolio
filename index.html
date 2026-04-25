@@ -8,6 +8,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="style.css">
+        <link rel="preload" as="image" href="public/avatar2.jpeg">
     </head>
 
     <body>
@@ -79,7 +80,7 @@
                                 <!-- music app -->
                                 <a href="projects/android.html" class="project-card" onclick="localStorage.setItem('projectFrom', 'index')">
                                     <div class="project-thumb">
-                                        <img src="public/project-images/android.png" alt="project 1">
+                                        <img src="public/project-images/android.png" alt="project 1" loading="lazy">
                                         <div class="project-overlay">
                                             <span>view project</span>
                                         </div>
@@ -98,7 +99,7 @@
                                 <!-- restaurant review website -->
                                 <a href="projects/restaurant.html" class="project-card">
                                     <div class="project-thumb">
-                                        <img src="public/project-images/restaurant.png" alt="project 2">
+                                        <img src="public/project-images/restaurant.png" alt="project 2" loading="lazy">
                                         <div class="project-overlay">
                                             <span>view project</span>
                                         </div>
@@ -118,7 +119,7 @@
                                 <!-- ehip -->
                                 <a href="projects/ehip.html" class="project-card">
                                     <div class="project-thumb">
-                                        <img src="public/project-images/kali-thumbnail.png" alt="project 3">
+                                        <img src="public/project-images/kali-thumbnail.png" alt="project 3" loading="lazy">
                                         <div class="project-overlay">
                                             <span>view project</span>
                                         </div>
@@ -191,175 +192,124 @@
                     <div class="row">
                         <h4 style="padding-top: 2%;">others</h4>
                         <div class="timeline">
-                            <!-- scs -->
+                            <!-- project refresh -->
                             <div class="timeline-item">
                                 <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <div class="row">
-                                            <div class="col-12 col-md-6">
-                                                <span class="timeline-year">Sep 2024 - Feb 2025 (6 months)</span>
-                                                <h4>Specialist Cadet School Graduation</h4>
-                                                <p>· completed 6 months of rigorous physical and mental training in SCS, and commissioned as a Third Sergeant upon graduation.</p>
-                                                <p>· the training pushed personal limits and developed leadership skills, mental resilience, physical fitness, and confidence under pressure.</p>
-                                                <p>· upon posting to my unit, i applied these leadership skills in trainings and operations, guiding and managing men under my command to carry out tasks efficiently.</p>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <!-- slideshow container -->
-                                                <div class="slideshow-container" id="slideshow-scs">
-                                                    <!-- full width images with number -->
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">1 / 4</div>
-                                                        <img src="public/experiences/scs1.jpg" class="lightbox-trigger" data-group="scs" data-index="0">
-                                                    </div>
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">2 / 4</div>
-                                                        <img src="public/experiences/scs2.jpg" class="lightbox-trigger" data-group="scs" data-index="1">
-                                                    </div>
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">3 / 4</div>
-                                                        <img src="public/experiences/scs3.jpg" class="lightbox-trigger" data-group="scs" data-index="2">
-                                                    </div>
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">4 / 4</div>
-                                                        <img src="public/experiences/scs4.jpg" class="lightbox-trigger" data-group="scs" data-index="3">
-                                                    </div>
-
-                                                    <!-- next and previous buttons -->
-                                                    <a class="prev" onclick="plusSlides(-1, 'slideshow-scs')">&#10094;</a>
-                                                    <a class="next" onclick="plusSlides(1, 'slideshow-scs')">&#10095;</a>
-
-                                                    <!-- dots -->
-                                                    <div class="dots-container">
-                                                        <span class="dot" onclick="currentSlide(1, 'slideshow-scs')"></span>
-                                                        <span class="dot" onclick="currentSlide(2, 'slideshow-scs')"></span>
-                                                        <span class="dot" onclick="currentSlide(3, 'slideshow-scs')"></span>
-                                                        <span class="dot" onclick="currentSlide(4, 'slideshow-scs')"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- project refresh -->
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <div class="row">
-                                            <div class="col-12 col-md-6">
-                                                <span class="timeline-year">Dec 2022</span>
-                                                <h4>Temasek Polytechnic's Project Refresh</h4>
-                                                <p>· volunteered at the school's partnership with the North East Community Development Council (NECDC) in 2022.</p>
-                                                <p>· cleaned up houses, repainted walls and ceilings, chatted and spent bonding sessions with the elderlies through games and interactions.</p>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <div class="slideshow-container" id="slideshow-refresh">
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">1 / 3</div>
-                                                        <img src="public/experiences/refresh1.webp" class="lightbox-trigger" data-group="refresh" data-index="0">
-                                                    </div>
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">2 / 3</div>
-                                                        <img src="public/experiences/refresh2.jpg" class="lightbox-trigger" data-group="refresh" data-index="1">
-                                                    </div>
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">3 / 3</div>
-                                                        <img src="public/experiences/refresh3.jpg" class="lightbox-trigger" data-group="refresh" data-index="2">
-                                                    </div>
-                                                    <a class="prev" onclick="plusSlides(-1, 'slideshow-refresh')">&#10094;</a>
-                                                    <a class="next" onclick="plusSlides(1, 'slideshow-refresh')">&#10095;</a>
-
-                                                    <div class="dots-container">
-                                                        <span class="dot" onclick="currentSlide(1, 'slideshow-refresh')"></span>
-                                                        <span class="dot" onclick="currentSlide(2, 'slideshow-refresh')"></span>
-                                                        <span class="dot" onclick="currentSlide(3, 'slideshow-refresh')"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- clean up by the coast -->
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <div class="row">
-                                            <div class="col-12 col-md-6">
-                                                <span class="timeline-year">Nov 2022</span>
-                                                <h4>Temasek Polytechnic's Clean Up By The Coast</h4>
-                                                <p>· volunteered in a coastal cleanup at East Coast Park, collecting litter and clearing debris to improve the environment for visitors and preserving the natural habitat for local wildlife.</p>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <img src="public/experiences/clean-up.jpg" class="lightbox-trigger single-image" data-group="cleanup" data-index="0">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- shanghai -->
-                                <div class="timeline-item">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <div class="row">
-                                            <div class="col-12 col-md-6">
-                                                <span class="timeline-year">Nov 2019</span>
-                                                <h4>Shanghai Cultural Immersion Trip</h4>
-                                                <p>· selected as 1 of 30 students chosen out of 80 applicants to represent the school on a cultural exchange trip to Shanghai, through shortlisting and interview process.</p>
-                                                <p>· we participated in cultural activities like watching live performances, dumpling making, and visiting museums and cultural heritage sites.</p>
-                                            </div>
-                                            <div class="col-12 col-md-6">
-                                                <div class="slideshow-container" id="slideshow-shanghai">
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">1 / 5</div>
-                                                        <img src="public/experiences/shanghai1.jpg" class="lightbox-trigger" data-group="shanghai" data-index="0">
-                                                    </div>
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">2 / 5</div>
-                                                        <img src="public/experiences/shanghai2.jpeg" class="lightbox-trigger" data-group="shanghai" data-index="1">
-                                                    </div>
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">3 / 5</div>
-                                                        <img src="public/experiences/shanghai3.jpeg" class="lightbox-trigger" data-group="shanghai" data-index="2">
-                                                    </div>
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">4 / 5</div>
-                                                        <img src="public/experiences/shanghai4.jpeg" class="lightbox-trigger" data-group="shanghai" data-index="3">
-                                                    </div>
-                                                    <div class="mySlides slide-fade">
-                                                        <div class="numbertext">5 / 5</div>
-                                                        <img src="public/experiences/shanghai5.jpeg" class="lightbox-trigger" data-group="shanghai" data-index="4">
-                                                    </div>
-                                                    <a class="prev" onclick="plusSlides(-1, 'slideshow-shanghai')">&#10094;</a>
-                                                    <a class="next" onclick="plusSlides(1, 'slideshow-shanghai')">&#10095;</a>
-
-                                                    <div class="dots-container">
-                                                        <span class="dot" onclick="currentSlide(1, 'slideshow-shanghai')"></span>
-                                                        <span class="dot" onclick="currentSlide(2, 'slideshow-shanghai')"></span>
-                                                        <span class="dot" onclick="currentSlide(3, 'slideshow-shanghai')"></span>
-                                                        <span class="dot" onclick="currentSlide(4, 'slideshow-shanghai')"></span>
-                                                        <span class="dot" onclick="currentSlide(5, 'slideshow-shanghai')"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- syf -->
-                                <div class="timeline-item" style="padding-bottom: 0px;">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-content">
-                                        <div class="row">
-                                            <div class="col-12 col-md-6">
-                                            <span class="timeline-year">Apr 2019</span>
-                                            <h4>Singapore Youth Festival</h4>
-                                            <p>· represented the school by partitipating in the 2019 Singapore Youth Festival in 2019 as a trumpeter in the school's symphonic band.</p>
-                                            <p>· months of practice and rehearsals went into preparing for the performance, which was a valuable experience in overcoming my stage fright and performing under pressure.</p>
+                                <div class="timeline-content">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <span class="timeline-year">Dec 2022</span>
+                                            <h4>Temasek Polytechnic's Project Refresh</h4>
+                                            <p>· volunteered at the school's partnership with the North East Community Development Council (NECDC) in 2022.</p>
+                                            <p>· cleaned up houses, repainted walls and ceilings, chatted and spent bonding sessions with the elderlies through games and interactions.</p>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <img src="public/experiences/syf.jpg" class="lightbox-trigger single-image" data-group="syf" data-index="0">
+                                            <div class="slideshow-container" id="slideshow-refresh">
+                                                <div class="mySlides">
+                                                    <div class="numbertext">1 / 3</div>
+                                                    <img src="public/experiences/refresh1.webp" class="lightbox-trigger" data-group="refresh" data-index="0" loading="lazy">
+                                                </div>
+                                                <div class="mySlides">
+                                                    <div class="numbertext">2 / 3</div>
+                                                    <img src="public/experiences/refresh2.jpg" class="lightbox-trigger" data-group="refresh" data-index="1" loading="lazy">
+                                                </div>
+                                                <div class="mySlides">
+                                                    <div class="numbertext">3 / 3</div>
+                                                    <img src="public/experiences/refresh3.jpg" class="lightbox-trigger" data-group="refresh" data-index="2" loading="lazy">
+                                                </div>
+                                                <a class="prev" onclick="plusSlides(-1, 'slideshow-refresh')">&#10094;</a>
+                                                <a class="next" onclick="plusSlides(1, 'slideshow-refresh')">&#10095;</a>
+
+                                                <div class="dots-container">
+                                                    <span class="dot" onclick="currentSlide(1, 'slideshow-refresh')"></span>
+                                                    <span class="dot" onclick="currentSlide(2, 'slideshow-refresh')"></span>
+                                                    <span class="dot" onclick="currentSlide(3, 'slideshow-refresh')"></span>
+                                                </div>
+                                            </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- clean up by the coast -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <span class="timeline-year">Nov 2022</span>
+                                            <h4>Temasek Polytechnic's Clean Up By The Coast</h4>
+                                            <p>· volunteered in a coastal cleanup at East Coast Park, collecting litter and clearing debris to improve the environment for visitors and preserving the natural habitat for local wildlife.</p>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <img src="public/experiences/clean-up.jpg" class="lightbox-trigger single-image" data-group="cleanup" data-index="0" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- shanghai -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <span class="timeline-year">Nov 2019</span>
+                                            <h4>Shanghai Cultural Immersion Trip</h4>
+                                            <p>· selected as 1 of 30 students chosen out of 80 applicants to represent the school on a cultural exchange trip to Shanghai, through shortlisting and interview process.</p>
+                                            <p>· we participated in cultural activities like watching live performances, dumpling making, and visiting museums and cultural heritage sites.</p>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="slideshow-container" id="slideshow-shanghai">
+                                                <div class="mySlides">
+                                                    <div class="numbertext">1 / 5</div>
+                                                    <img src="public/experiences/shanghai1.jpg" class="lightbox-trigger" data-group="shanghai" data-index="0" loading="lazy">
+                                                </div>
+                                                <div class="mySlides">
+                                                    <div class="numbertext">2 / 5</div>
+                                                    <img src="public/experiences/shanghai2.jpeg" class="lightbox-trigger" data-group="shanghai" data-index="1" loading="lazy">
+                                                </div>
+                                                <div class="mySlides">
+                                                    <div class="numbertext">3 / 5</div>
+                                                    <img src="public/experiences/shanghai3.jpeg" class="lightbox-trigger" data-group="shanghai" data-index="2" loading="lazy">
+                                                </div>
+                                                <div class="mySlides">
+                                                    <div class="numbertext">4 / 5</div>
+                                                    <img src="public/experiences/shanghai4.jpeg" class="lightbox-trigger" data-group="shanghai" data-index="3" loading="lazy">
+                                                </div>
+                                                <div class="mySlides">
+                                                    <div class="numbertext">5 / 5</div>
+                                                    <img src="public/experiences/shanghai5.jpeg" class="lightbox-trigger" data-group="shanghai" data-index="4" loading="lazy">
+                                                </div>
+                                                <a class="prev" onclick="plusSlides(-1, 'slideshow-shanghai')">&#10094;</a>
+                                                <a class="next" onclick="plusSlides(1, 'slideshow-shanghai')">&#10095;</a>
+
+                                                <div class="dots-container">
+                                                    <span class="dot" onclick="currentSlide(1, 'slideshow-shanghai')"></span>
+                                                    <span class="dot" onclick="currentSlide(2, 'slideshow-shanghai')"></span>
+                                                    <span class="dot" onclick="currentSlide(3, 'slideshow-shanghai')"></span>
+                                                    <span class="dot" onclick="currentSlide(4, 'slideshow-shanghai')"></span>
+                                                    <span class="dot" onclick="currentSlide(5, 'slideshow-shanghai')"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- syf -->
+                            <div class="timeline-item" style="padding-bottom: 0px;">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                        <span class="timeline-year">Apr 2019</span>
+                                        <h4>Singapore Youth Festival</h4>
+                                        <p>· represented the school by partitipating in the 2019 Singapore Youth Festival in 2019 as a trumpeter in the school's symphonic band.</p>
+                                        <p>· months of practice and rehearsals went into preparing for the performance, which was a valuable experience in overcoming my stage fright and performing under pressure.</p>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <img src="public/experiences/syf.jpg" class="lightbox-trigger single-image" data-group="syf" data-index="0" loading="lazy">
                                     </div>
                                 </div>
                             </div>

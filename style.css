@@ -576,6 +576,12 @@ a:focus
 /* hide the images by default */
 .mySlides
 {
+    display: none;
+    position: relative;
+}
+
+.mySlides.active-slide
+{
     display: block;
 }
 
@@ -586,6 +592,8 @@ a:focus
     position: relative;
     cursor: pointer;
     padding-bottom: 35px;
+    overflow: hidden;
+    position: relative;
 }
 
 .slideshow-container img
@@ -624,6 +632,46 @@ a:focus
 .prev:hover, .next:hover
 {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slideInRight
+{
+    from
+    {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft
+{
+    from
+    {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-right
+{
+    animation: slideInRight 0.3s ease forwards;
+}
+
+.slide-in-left
+{
+    animation: slideInLeft 0.3s ease forwards;
 }
 
 /* number text */
