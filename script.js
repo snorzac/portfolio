@@ -160,14 +160,25 @@ if (document.getElementById('lightbox'))
 
         androiduiux:
         [
+            `${basePath}/public/project-images/low-fi.png`,
             `${basePath}/public/project-images/hi-fi1.png`,
-            `${basePath}/public/project-images/hi-fi2.png`,
-            `${basePath}/public/project-images/low-fi.png`
+            `${basePath}/public/project-images/hi-fi2.png`
         ],
 
         restaurant:
         [
             `${basePath}/public/project-images/restaurant.png`,
+        ],
+
+        restaurant_lofi:
+        [
+            `${basePath}/public/project-images/cdev1.png`,
+            `${basePath}/public/project-images/cdev2.png`,
+            `${basePath}/public/project-images/cdev3.png`,
+            `${basePath}/public/project-images/cdev4.png`,
+            `${basePath}/public/project-images/cdev5.png`,
+            `${basePath}/public/project-images/cdev6.png`,
+            `${basePath}/public/project-images/eer.jpeg`
         ],
 
         mp:
@@ -249,9 +260,26 @@ document.querySelectorAll('.slideshow-container').forEach(function(container)
     container.addEventListener('touchstart', function(e)
     {
         touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
     },
     {
-        passive: true
+        passive: false
+    });
+
+    container.addEventListener('touchmove', function(e)
+    {
+        const diffX = Math.abs(e.changedTouches[0].screenX - touchStartX);
+        const diffY = Math.abs(e.changedTouches[0].screenY - touchStartY);
+
+        // only lock scroll if swiping more horizontally than vertically
+        if (diffX > diffY)
+        {
+            e.preventDefault();
+        }
+    },
+
+    {
+        passive: false
     });
 
     container.addEventListener('touchend', function(e)
@@ -265,7 +293,7 @@ document.querySelectorAll('.slideshow-container').forEach(function(container)
         {
             if (diff > 0)
             {
-                //swiped left = next
+                // swiped left = next
                 plusSlides(1, container.id);
             }
 
@@ -276,7 +304,8 @@ document.querySelectorAll('.slideshow-container').forEach(function(container)
             }
         }
     },
+    
     {
-        passive: true
+        passive: false
     });
 });
