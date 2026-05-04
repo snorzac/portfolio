@@ -99,19 +99,6 @@ function goToSlide(container, n, direction)
         }
     }, 10);
 
-    // // apply direction animation
-    // if (direction === 1)
-    // {
-    //     // coming from right
-    //     activeSlide.classList.add('slide-in-right');
-    // }
-
-    // else if (direction === -1)
-    // {
-    //     // coming from left
-    //     activeSlide.classList.add('slide-in-left');
-    // }
-
     dots[n - 1].className = 'dot active';
     container.dataset.index = n;
 }
@@ -183,9 +170,17 @@ if (document.getElementById('lightbox'))
             `${basePath}/public/project-images/restaurant.png`,
         ],
 
-        ehip:
+        mp:
         [
-            `${basePath}/public/project-images/kali-thumbnail.png`
+            `${basePath}/public/project-images/esp32.jpg`
+        ],
+
+        mp_others:
+        [
+            `${basePath}/public/project-images/esp-nsh.jpg`,
+            `${basePath}/public/project-images/esp-light.gif`,
+            `${basePath}/public/project-images/esp-ap.jpg`,
+            `${basePath}/public/project-images/esp-mqtt.jpg`
         ]
     };
     

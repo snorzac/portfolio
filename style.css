@@ -300,7 +300,7 @@ a:focus
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    background-color: rgb(255, 230, 237);
+    background-color: white;
 }
 
 .project-thumb img
@@ -738,4 +738,17 @@ a:focus
     object-fit: cover;
     object-position: center;
     cursor: pointer;
+}
+
+.mp-img
+{
+    padding-top: 2%;
+}
+
+@media (max-width: 768px)
+{
+    .mp-img
+    {
+        padding-top: 0%;
+    }
 }
