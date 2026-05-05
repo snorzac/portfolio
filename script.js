@@ -10,7 +10,7 @@ if (document.querySelector('.auto-type'))
     var typed = new Typed('.auto-type',
         {
             strings: ["hello! i am isaac :)"],
-            typeSpeed: 70
+            typeSpeed: 50
         }
     );
 }
@@ -314,4 +314,31 @@ document.querySelectorAll('.slideshow-container').forEach(function(container)
     {
         passive: false
     });
+});
+
+// preload slideshow images
+function preloadImages(images)
+{
+    images.forEach(function(src)
+    {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
+// preload all groups
+if (document.getElementById('lightbox'))
+{
+    Object.values(lightboxGroups).forEach(function(group)
+    {
+        preloadImages(group);
+    });
+}
+
+// preload all slideshow images on the page
+document.querySelectorAll('.mySlides img').forEach(function(img)
+{
+    const src = img.getAttribute('src');
+    const preloadImg = new Image();
+    preloadImg.src = src;
 });
