@@ -165,9 +165,15 @@ if (document.getElementById('lightbox'))
             `${basePath}/public/project-images/hi-fi2.png`
         ],
 
-        restaurant:
+        mainrestaurant:
         [
-            `${basePath}/public/project-images/restaurant.png`,
+            `${basePath}/public/project-images/restaurant1.png`,
+            `${basePath}/public/project-images/restaurant2.png`,
+            `${basePath}/public/project-images/restaurant3.png`,
+            `${basePath}/public/project-images/restaurant4.png`,
+            `${basePath}/public/project-images/restaurant5.png`,
+            `${basePath}/public/project-images/restaurant6.png`,
+            `${basePath}/public/project-images/restaurant7.png`
         ],
 
         restaurant_lofi:
