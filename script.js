@@ -9,30 +9,34 @@ if (document.querySelector('.auto-type'))
 {
     var typed = new Typed('.auto-type',
         {
-            strings: ["hello! i am isaac :)"],
+            strings: ["Hello! I am Isaac!"],
             typeSpeed: 50
         }
     );
 }
 
 // close navbar dropdown when clicked on mobile
-document.querySelectorAll('.navbar-nav a').forEach(function(link)
+document.addEventListener('DOMContentLoaded', () =>
 {
-    link.addEventListener('click', function()
+    document.querySelectorAll('.navbar-nav a').forEach(link =>
     {
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        
-        if (navbarCollapse.classList.contains('show'))
+        link.addEventListener('click', () =>
         {
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-            bsCollapse.hide();
-        };
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            
+            if (navbarCollapse.classList.contains('show'))
+            {
+                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+                // const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                bsCollapse.hide();
+            };
+        });
     });
 });
 
+
 // new slideshow
 let slideIndex = 1;
-// showSlides(slideIndex);
 
 // next/previous controls
 function plusSlides(n, containerId)
