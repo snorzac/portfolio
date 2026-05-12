@@ -16,24 +16,37 @@ if (document.querySelector('.auto-type'))
 }
 
 // close navbar dropdown when clicked on mobile
-document.addEventListener('DOMContentLoaded', () =>
-{
-    document.querySelectorAll('.navbar-nav a').forEach(link =>
+setTimeout(function()
     {
-        link.addEventListener('click', () =>
-        {
-            const navbarCollapse = document.querySelector('.navbar-collapse');
-            
-            if (navbarCollapse.classList.contains('show'))
-            {
-                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
-                // const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-                bsCollapse.hide();
-            };
-        });
-    });
-});
+        const overlay = document.querySelector('.navbar-overlay');
+        const toggler = document.querySelector('.navbar-toggler');
+        const closeBtn = document.querySelector('.navbar-close');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
 
+        function openMenu()
+        {
+            navbarCollapse.classList.add('show');
+            overlay.classList.add('show');
+            closeBtn.classList.add('show');
+        }
+
+        function closeMenu()
+        {
+            navbarCollapse.classList.remove('show');
+            overlay.classList.remove('show');
+            closeBtn.classList.remove('show');
+        }
+
+        toggler.addEventListener('click', openMenu);
+        overlay.addEventListener('click', closeMenu);
+        closeBtn.addEventListener('click', closeMenu);
+
+        document.querySelectorAll('.navbar-nav a').forEach(function(link)
+    {
+        link.addEventListener('click', closeMenu);
+    });
+    
+}, 500);
 
 // new slideshow
 let slideIndex = 1;
@@ -121,7 +134,7 @@ if (document.getElementById('lightbox'))
 
     const lightboxGroups =
     {
-        //experiences image
+        // experiences image
         scs:
         [
             `${basePath}/public/experiences/scs1.jpg`,
