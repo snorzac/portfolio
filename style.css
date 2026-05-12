@@ -119,6 +119,11 @@ html
     text-decoration: underline;
 }
 
+.navbar-close
+{
+    display: none;
+}
+
 @media (max-width: 768px)
 {
     .container
@@ -208,6 +213,7 @@ html
     
     .navbar-close
     {
+        display: block;
         position: fixed;
         top: 16px;
         right: 16px;
@@ -223,7 +229,7 @@ html
     
     .navbar-collapse
     {
-        z-index: 9999 !important;
+        z-index: 9999;
     }
     
     .navbar-collapse.show
