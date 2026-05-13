@@ -341,7 +341,7 @@ body
 
 .sec1
 {
-    padding-top: 50.4px;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -353,6 +353,7 @@ body
     .sec1
     {
         flex-direction: column;
+        padding-top: 50.4px;
         /* padding: 2rem 1rem; */
         /* gap: 1.5rem; */
         /* min-height: 95vh; */
