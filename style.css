@@ -352,11 +352,9 @@ body
 {
     .sec1
     {
+        justify-content: initial;
         flex-direction: column;
         padding-top: 50.4px;
-        /* padding: 2rem 1rem; */
-        /* gap: 1.5rem; */
-        /* min-height: 95vh; */
     }
 }
 
@@ -369,16 +367,18 @@ body
     width: 450px;
     height: 450px;
     object-fit: cover;
-    padding: 0px !important;
-    margin: 0px !important;
+    aspect-ratio: 1 / 1;
+    /* padding: 0px !important;
+    margin: 0px !important; */
 }
 
 @media (max-width: 768px)
 {
     .avatar
     {
-        width: 220px;
-        height: 220px;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 50px;
     }
 }
 
@@ -416,6 +416,11 @@ a
 a:focus
 {
     outline: none;
+}
+
+.timeline-item
+{
+    padding-bottom: 20px;
 }
 
 .timeline-year
