@@ -116,7 +116,7 @@ function goToSlide(container, n, direction)
         }
     }, 10);
 
-    dots[n - 1].className = 'dot active';
+    // dots[n - 1].className = 'dot active';
     container.dataset.index = n;
 }
 
@@ -135,19 +135,11 @@ if (document.getElementById('lightbox'))
     const lightboxGroups =
     {
         // experiences image
-        scs:
-        [
-            `${basePath}/public/experiences/scs1.jpg`,
-            `${basePath}/public/experiences/scs2.jpg`,
-            `${basePath}/public/experiences/scs3.jpg`,
-            `${basePath}/public/experiences/scs4.jpg`
-        ],
-
         refresh:
         [
-            `${basePath}/public/experiences/refresh1.webp`,
-            `${basePath}/public/experiences/refresh2.jpg`,
-            `${basePath}/public/experiences/refresh3.jpg`
+            `${basePath}/public/experiences/refresh/refresh1.webp`,
+            `${basePath}/public/experiences/refresh/refresh2.jpg`,
+            `${basePath}/public/experiences/refresh/refresh3.jpg`
         ],
 
         cleanup:
@@ -157,11 +149,11 @@ if (document.getElementById('lightbox'))
 
         shanghai:
         [
-            `${basePath}/public/experiences/shanghai1.jpg`,
-            `${basePath}/public/experiences/shanghai2.jpeg`,
-            `${basePath}/public/experiences/shanghai3.jpeg`,
-            `${basePath}/public/experiences/shanghai4.jpeg`,
-            `${basePath}/public/experiences/shanghai5.jpeg`
+            `${basePath}/public/experiences/shanghai/shanghai1.jpg`,
+            `${basePath}/public/experiences/shanghai/shanghai2.jpeg`,
+            `${basePath}/public/experiences/shanghai/shanghai3.jpeg`,
+            `${basePath}/public/experiences/shanghai/shanghai4.jpeg`,
+            `${basePath}/public/experiences/shanghai/shanghai5.jpeg`
         ],
 
         syf:
@@ -172,49 +164,49 @@ if (document.getElementById('lightbox'))
         // project images
         android:
         [
-            `${basePath}/public/project-images/android.png`
+            `${basePath}/public/project-images/android/android.png`
         ],
 
         androiduiux:
         [
-            `${basePath}/public/project-images/low-fi.png`,
-            `${basePath}/public/project-images/hi-fi1.png`,
-            `${basePath}/public/project-images/hi-fi2.png`
+            `${basePath}/public/project-images/android/low-fi.png`,
+            `${basePath}/public/project-images/android/hi-fi1.png`,
+            `${basePath}/public/project-images/android/hi-fi2.png`
         ],
 
         mainrestaurant:
         [
-            `${basePath}/public/project-images/restaurant1.png`,
-            `${basePath}/public/project-images/restaurant2.png`,
-            `${basePath}/public/project-images/restaurant3.png`,
-            `${basePath}/public/project-images/restaurant4.png`,
-            `${basePath}/public/project-images/restaurant5.png`,
-            `${basePath}/public/project-images/restaurant6.png`,
-            `${basePath}/public/project-images/restaurant7.png`
+            `${basePath}/public/project-images/cdev/restaurant1.png`,
+            `${basePath}/public/project-images/cdev/restaurant2.png`,
+            `${basePath}/public/project-images/cdev/restaurant3.png`,
+            `${basePath}/public/project-images/cdev/restaurant4.png`,
+            `${basePath}/public/project-images/cdev/restaurant5.png`,
+            `${basePath}/public/project-images/cdev/restaurant6.png`,
+            `${basePath}/public/project-images/cdev/restaurant7.png`
         ],
 
         restaurant_lofi:
         [
-            `${basePath}/public/project-images/cdev1.png`,
-            `${basePath}/public/project-images/cdev2.png`,
-            `${basePath}/public/project-images/cdev3.png`,
-            `${basePath}/public/project-images/cdev4.png`,
-            `${basePath}/public/project-images/cdev5.png`,
-            `${basePath}/public/project-images/cdev6.png`,
-            `${basePath}/public/project-images/eer.jpeg`
+            `${basePath}/public/project-images/cdev/cdev1.png`,
+            `${basePath}/public/project-images/cdev/cdev2.png`,
+            `${basePath}/public/project-images/cdev/cdev3.png`,
+            `${basePath}/public/project-images/cdev/cdev4.png`,
+            `${basePath}/public/project-images/cdev/cdev5.png`,
+            `${basePath}/public/project-images/cdev/cdev6.png`,
+            `${basePath}/public/project-images/cdev/eer.jpeg`
         ],
 
         mp:
         [
-            `${basePath}/public/project-images/esp32.jpg`
+            `${basePath}/public/project-images/mp/esp32.jpg`
         ],
 
         mp_others:
         [
-            `${basePath}/public/project-images/esp-nsh.jpg`,
-            `${basePath}/public/project-images/esp-light.gif`,
-            `${basePath}/public/project-images/esp-ap.jpg`,
-            `${basePath}/public/project-images/esp-mqtt.jpg`
+            `${basePath}/public/project-images/mp/esp-nsh.jpg`,
+            `${basePath}/public/project-images/mp/esp-light.gif`,
+            `${basePath}/public/project-images/mp/esp-ap.jpg`,
+            `${basePath}/public/project-images/mp/esp-mqtt.jpg`
         ]
     };
     

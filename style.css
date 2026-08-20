@@ -315,6 +315,7 @@ body
     font-stretch: 100%;
     color: rgb(205, 205, 205);
     display: block;
+    max-width: 830px;
 }
 
 @media (max-width: 768px)
