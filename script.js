@@ -135,6 +135,19 @@ if (document.getElementById('lightbox'))
     const lightboxGroups =
     {
         // experiences image
+        akita:
+        [
+            `${basePath}/public/experiences/akita/akita1.jpg`,
+            `${basePath}/public/experiences/akita/akita2.jpg`,
+            `${basePath}/public/experiences/akita/akita3.jpg`,
+            `${basePath}/public/experiences/akita/akita4.jpg`,
+            `${basePath}/public/experiences/akita/akita5.jpg`,
+            `${basePath}/public/experiences/akita/akita6.jpg`,
+            `${basePath}/public/experiences/akita/akita7.jpg`,
+            `${basePath}/public/experiences/akita/akita8.jpg`,
+            `${basePath}/public/experiences/akita/akita9.jpg`
+        ],
+
         refresh:
         [
             `${basePath}/public/experiences/refresh/refresh1.webp`,

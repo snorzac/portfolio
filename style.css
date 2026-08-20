@@ -315,7 +315,7 @@ body
     font-stretch: 100%;
     color: rgb(205, 205, 205);
     display: block;
-    max-width: 830px;
+    max-width: 850px;
 }
 
 @media (max-width: 768px)
@@ -367,8 +367,8 @@ body
 {
     .avatar
     {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
     }
 }
 
