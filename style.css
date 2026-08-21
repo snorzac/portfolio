@@ -404,19 +404,6 @@ a:focus
     padding-bottom: 20px;
 }
 
-.coast-timeline-item
-{
-    padding-bottom: 35px;
-}
-
-@media (max-width: 768px)
-{
-    .coast-timeline-item
-    {
-        padding-bottom: 35px;
-    }
-}
-
 .timeline-year
 {
     font-family: 'JetBrains Mono';
@@ -917,17 +904,4 @@ a:focus
     object-fit: cover;
     object-position: center;
     cursor: pointer;
-}
-
-.mp-img
-{
-    padding-top: 2%;
-}
-
-@media (max-width: 768px)
-{
-    .mp-img
-    {
-        padding-top: 0%;
-    }
 }

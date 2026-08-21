@@ -15,13 +15,21 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="mono-h1" style="padding-top: 70px;">Final Year Project</h1>
-                    <h4 class="mono-h4">Operational Technology (OT) Security Patch Management System</h4>
+                    <h3 class="mono-h3">Operational Technology (OT) Security Patch Management System</h3>
                 </div>
             </div>
             
-            <div class="row mp-img" style="padding-top: 0;">
+            <div class="row">
                 <div class="col-12 col-md-6">
-                    <img src="../public/project-images/mp/esp32.jpg" class="lightbox-trigger" data-group="mp" data-index="0" loading="lazy" style="object-fit: contain;">
+                    <div class="slideshow-container" id="slideshow-mp1">
+                        <div class="mySlides">
+                            <img src="../public/project-images/mp/esp32.jpg" class="lightbox-trigger" data-group="mp" data-index="0" loading="lazy" style="object-fit: contain;">
+                        </div>
+
+                        <div class="dots-container">
+                            <span class="dot" style="background-color: rgb(26, 27, 30);" onclick="currentSlide(1, 'slideshow-mp1')"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <p class="mono-p">My group utilised NuttX RTOS, MCUboot, and ESP32-S3 to perform Over-The-Air (OTA) updates, with security measures including encryption and hash verification before deploying updates to the target device.</p>
@@ -31,9 +39,9 @@
             </div>
 
             <!-- slideshow -->
-            <div class="row" style="padding-top: 30px;">
+            <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="slideshow-container" id="slideshow-mp">
+                    <div class="slideshow-container" id="slideshow-mp2">
                         <div class="mySlides">
                             <div class="numbertext">1 / 4</div>
                             <img src="../public/project-images/mp/esp-nsh.jpg" style="width: 100%; object-fit: contain;" class="lightbox-trigger" data-group="mp_others" data-index="0">
@@ -51,14 +59,14 @@
                             <img src="../public/project-images/mp/esp-mqtt.jpg" style="width: 100%; object-fit: contain;" class="lightbox-trigger" data-group="mp_others" data-index="3">
                         </div>
 
-                        <a class="prev" onclick="plusSlides(-1, 'slideshow-mp')">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1, 'slideshow-mp')">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1, 'slideshow-mp2')">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 'slideshow-mp2')">&#10095;</a>
 
                         <div class="dots-container">
-                            <span class="dot" onclick="currentSlide(1, 'slideshow-mp')"></span>
-                            <span class="dot" onclick="currentSlide(2, 'slideshow-mp')"></span>
-                            <span class="dot" onclick="currentSlide(3, 'slideshow-mp')"></span>
-                            <span class="dot" onclick="currentSlide(4, 'slideshow-mp')"></span>
+                            <span class="dot" onclick="currentSlide(1, 'slideshow-mp2')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'slideshow-mp2')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'slideshow-mp2')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'slideshow-mp2')"></span>
                         </div>
                     </div>
                 </div>
