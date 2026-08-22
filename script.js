@@ -140,12 +140,12 @@ if (document.getElementById('lightbox'))
             `${basePath}/public/experiences/akita/akita1.jpg`,
             `${basePath}/public/experiences/akita/akita2.jpg`,
             `${basePath}/public/experiences/akita/akita3.jpg`,
-            `${basePath}/public/experiences/akita/akita4.jpg`,
+            `${basePath}/public/experiences/akita/akita4.JPG`,
             `${basePath}/public/experiences/akita/akita5.jpg`,
             `${basePath}/public/experiences/akita/akita6.jpg`,
             `${basePath}/public/experiences/akita/akita7.jpg`,
-            `${basePath}/public/experiences/akita/akita8.jpg`,
-            `${basePath}/public/experiences/akita/akita9.jpg`
+            `${basePath}/public/experiences/akita/akita8.JPG`,
+            `${basePath}/public/experiences/akita/akita9.JPG`
         ],
 
         refresh:

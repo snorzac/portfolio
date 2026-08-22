@@ -232,20 +232,11 @@ html
 
 .socials
 {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5%;
-    padding-top: 10px;
-    font-size: 50px;
-}
-
-.icon
-{
-    color: grey;
-}
-
-.icon a:hover
-{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 60px;
+    padding-top: 20px;
+    font-size: 55px;
     color: white;
 }
 
