@@ -282,6 +282,13 @@ if (document.getElementById('lightbox'))
 // moving slides with finger swipe
 document.querySelectorAll('.slideshow-container').forEach(function(container)
 {
+
+    const slideCount = container.querySelectorAll('.mySlides').length;
+    
+    // skip swipe/dot logic entirely for single-image containers
+    if (slideCount <= 1)
+        return;
+    
     let touchStartX = 0;
     let touchEndX = 0;
 
